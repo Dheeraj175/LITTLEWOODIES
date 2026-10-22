@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover LITTLEWOODIES, where kids learn, play, and grow with wooden learning products designed to inspire creativity, curiosity, and fun.">
+        <!-- Google Fonts: Same as Learn Page -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- LOGO AND TITTLE -->
+        <link rel="icon" type="image/jpeg" href="logo.jpeg">
+        <title>Alphabet Learning | LITTLEWOODIES</title>
+        <link rel="stylesheet" href="alphabet.css">
+
+    </head>
+
+    <body>
+
+        <header class="page-header">
+            <a href="Learn.html" class="nav-link previous-link">← Previous Page</a>
+            <a href="index.html" class="brand" aria-label="LITTLEWOODIES Home">
+                <img src="image/logo.jpeg" alt="LITTLEWOODIES Logo">
+                <span>LITTLEWOODIES</span>
+            </a>
+            <a href="index.html" class="nav-link home-link">🏠 Home</a>
+        </header>
+
+        <main class="learning-page">
+            <!-- INTRODUCTION -->
+            <section class="intro">
+                <span class="intro-tag">🌱 LITTLEWOODIES LEARNING CORNER</span>
+                <h1>Let's Learn the Alphabet!</h1>
+                <p>Tap a wooden letter, discover a fun picture, and listen to its sound!</p>
+                <div class="intro-decor" aria-hidden="true">
+                    <span>🍃</span>
+                    <span>🧸</span>
+                    <span>🌈</span>
+                    <span>⭐</span>
+                </div>
+            </section>
+
+            <!-- ALPHABET CARDS -->
+            <section class="alphabet-section">
+                <div class="section-heading">
+                    <h2>🔤 Meet Your ABC Friends!</h2>
+                    <p>Tap any letter to reveal its emoji.</p>
+                </div>
+                <section class="alphabet-grid" id="alphabetGrid" aria-label="Alphabet learning buttons"></section>
+            </section>
+
+            <p class="instructions">Tap a letter to see its picture and hear the sound!</p>
+            <p id="audioStatus" class="audio-status" role="status" aria-live="polite"></p>
+
+            <!-- CREATIVE NUMBERS MUSIC PLAYER -->
+            <section class="song-section">
+                <div class="song-top">
+                    <div class="song-icon" id="musicIcon" aria-hidden="true">🎵</div>
+                    <div class="song-details">
+                        <span class="song-label">🎉 SING • Speak • LEARN</span>
+                        <h2>It's alphabet song time!</h2>
+                        <p>Clap your hands and sing alphabet song!</p>
+                    </div>
+                    <div class="song-stars" aria-hidden="true">🌟🎈</div>
+                </div>
+                <div class="music-player">
+                    <div class="player-heading">
+                        <span class="equalizer" aria-hidden="true">♫</span>
+                        <div>
+                            <h3>My alphabet Song</h3>
+                            <p id="songMessage">Ready to sing and learn alphabet?</p>
+                        </div>
+                        <span class="music-note" aria-hidden="true">🎶</span>
+                    </div>
+                    <div class="player-controls">
+                        <button type="button" id="playSong" class="play-button" aria-label="Play alphabet song">▶</button>
+                        <div class="track-area">
+                            <div class="track-labels">
+                                <span id="currentTime">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                            <input id="songProgress" class="song-progress" type="range" min="0" max="100" value="0" aria-label="Song progress">
+                        </div>
+                    </div>
+                    <div class="player-bottom">
+                        <span>🎧 Listen and sing along</span>
+                        <span id="playerStatus">PRESS PLAY TO START</span>
+                    </div>
+                    <audio id="songPlayer" preload="metadata">
+                        <source src="./audio/alphabet/A-Z%20songs.mp3" type="audio/mpeg">
+                        Your browser does not support audio playback.
+                    </audio>
+                </div>
+                <div class="song-rainbow" aria-hidden="true">🌈 🍎 ⚽ 🐱 ⭐ 🎈</div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer-features">
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">🍃</span>
+                    <h3>Thoughtfully Designed</h3>
+                    <p>Made with little learners in mind.</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">🎓</span>
+                    <h3>Boosts Learning</h3>
+                    <p>Discover joyful ways to learn and play</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">💖</span>
+                    <h3>Made with Care</h3>
+                    <p>Every little detail matters to us</p>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img class="logo" src="image/logo.jpeg" alt="Littlewoodies Logo">
+                        <span>LITTLEWOODIES</span>
+                    </a>
+                    <p class="slogan">LEARN • PLAY • GROW</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h3>Explore</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Learn.html">Listen & Learn</a></li>
+                            <li><a href="Products.html">Other Products</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>About & Support</h3>
+                        <ul>
+                            <li><a href="About.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="Feedback.html">Feedback & Suggestions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 LITTLEWOODIES. All rights reserved.</p>
+            </div>
+        </footer>
+        
+        <!-- LETTER AUDIO -->
+        <audio id="letterAudio" preload="none"></audio>
+
+        <script>
+            const alphabet = [
+                { letter: "A", word: "Apple", emoji: "🍎" },
+                { letter: "B", word: "Ball", emoji: "⚽" },
+                { letter: "C", word: "Cat", emoji: "🐱" },
+                { letter: "D", word: "Dog", emoji: "🐶" },
+                { letter: "E", word: "Elephant", emoji: "🐘" },
+                { letter: "F", word: "Fish", emoji: "🐠" },
+                { letter: "G", word: "Grapes", emoji: "🍇" },
+                { letter: "H", word: "Hen", emoji: "🐔" },
+                { letter: "I", word: "Ice Cream", emoji: "🍦" },
+                { letter: "J", word: "Jam", emoji: "🍯" },
+                { letter: "K", word: "Kite", emoji: "🪁" },
+                { letter: "L", word: "Lion", emoji: "🦁" },
+                { letter: "M", word: "Mango", emoji: "🥭" },
+                { letter: "N", word: "Nest", emoji: "🪺" },
+                { letter: "O", word: "Owl", emoji: "🦉" },
+                { letter: "P", word: "Parrot", emoji: "🦜" },
+                { letter: "Q", word: "Queen", emoji: "👑" },
+                { letter: "R", word: "Rabbit", emoji: "🐰" },
+                { letter: "S", word: "Sun", emoji: "☀️" },
+                { letter: "T", word: "Tiger", emoji: "🐯" },
+                { letter: "U", word: "Umbrella", emoji: "☂️" },
+                { letter: "V", word: "Van", emoji: "🚐" },
+                { letter: "W", word: "Watch", emoji: "⌚" },
+                { letter: "X", word: "Xylophone", emoji: "🎼" },
+                { letter: "Y", word: "Yak", emoji: "🐂" },
+                { letter: "Z", word: "Zebra", emoji: "🦓" }
+            ];
+
+            const grid = document.getElementById("alphabetGrid");
+            const letterAudio = document.getElementById("letterAudio");
+            const audioStatus = document.getElementById("audioStatus");
+
+            // Custom song player elements
+            const songPlayer = document.getElementById("songPlayer");
+            const playSong = document.getElementById("playSong");
+            const songProgress = document.getElementById("songProgress");
+            const currentTime = document.getElementById("currentTime");
+            const duration = document.getElementById("duration");
+            const songMessage = document.getElementById("songMessage");
+            const playerStatus = document.getElementById("playerStatus");
+            const musicIcon = document.getElementById("musicIcon");
+            const musicPlayer = document.querySelector(".music-player");
+
+            alphabet.forEach(({ letter, word, emoji }, index) => {
+                const card = document.createElement("article");
+                card.className = "letter-card";
+                card.style.setProperty("--card-index", index);
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = "wooden-letter";
+                button.textContent = letter;
+                button.setAttribute("aria-label", `Letter ${letter}`);
+                button.setAttribute("aria-pressed", "false");
+                const sentence = document.createElement("p");
+                sentence.className = "letter-sentence";
+                sentence.textContent = `${letter} is for ${word}`;
+                button.addEventListener("click", async () => {
+                    // Show emoji for 4 seconds
+                    clearTimeout(button.resetTimer);
+                    button.textContent = emoji;
+                    button.classList.add("revealed");
+                    button.setAttribute("aria-label", `${letter} is for ${word}`);
+                    button.setAttribute("aria-pressed", "true");
+                    button.resetTimer = setTimeout(() => {
+                        button.textContent = letter;
+                        button.classList.remove("revealed");
+                        button.setAttribute("aria-label", `Letter ${letter}`);
+                        button.setAttribute("aria-pressed", "false");
+                    }, 4000);
+
+                    // Play the selected letter sound
+                    letterAudio.pause();
+                    letterAudio.currentTime = 0;
+                    letterAudio.src = `./audio/alphabet/${letter}.mpeg`;
+                    audioStatus.textContent = `🔊 ${letter} is for ${word}!`;
+                    try {
+                        await letterAudio.play();
+                    }   catch (error) {
+                            audioStatus.textContent =
+                            `Could not play ${letter}'s sound. Check audio/alphabet/${letter}.mpeg`;
+                            console.error("Letter audio error:", error);
+                        }
+                });
+
+                card.appendChild(button);
+                card.appendChild(sentence);
+                grid.appendChild(card);
+            });
+
+            // Letter audio messages
+            letterAudio.addEventListener("ended", () => {
+                audioStatus.textContent =
+                "🌟 Well done! Choose another letter.";
+            });
+
+            letterAudio.addEventListener("error", () => {
+                audioStatus.textContent =
+                "Letter sound could not load. Please check your audio files.";
+            });
+            // Convert seconds to minutes:seconds
+            function formatTime(seconds) {
+                if (!Number.isFinite(seconds) || seconds < 0) {
+                    return "0:00";
+                }
+                const minutes = Math.floor(seconds / 60);
+                const remainingSeconds = Math.floor(seconds % 60);
+                return `${minutes}:${String(remainingSeconds).padStart(2, "0")}`;
+            }
+            // Update the duration when song information loads
+            songPlayer.addEventListener("loadedmetadata", () => {
+                duration.textContent = formatTime(songPlayer.duration);
+            });
+            // Update duration if metadata was already available
+            if (songPlayer.readyState >= 1) {
+                duration.textContent = formatTime(songPlayer.duration);
+            }
+            // Play and pause using the green custom button
+            playSong.addEventListener("click", async () => {
+                if (songPlayer.paused) {
+                    try {
+                        await songPlayer.play();
+                    }   catch (error) {
+                            playerStatus.textContent = "SONG COULD NOT PLAY";
+                            songMessage.textContent =
+                            "Please check your song file and try again.";
+                            console.error("Song playback error:", error);
+                        }
+                }   else {
+                        songPlayer.pause();
+                    }
+            });
+
+            // Song starts playing
+            songPlayer.addEventListener("play", () => {
+                playSong.textContent = "Ⅱ";
+                playSong.setAttribute("aria-label", "Pause Alphabet song");
+                playerStatus.textContent = "NOW PLAYING ♪";
+                songMessage.textContent = "Let's sing along! 🎵";
+                musicIcon.classList.add("is-playing");
+                musicPlayer.classList.add("is-playing");
+            });
+            // Song is paused
+            songPlayer.addEventListener("pause", () => {
+                playSong.textContent = "▶";
+                playSong.setAttribute("aria-label", "Play song");
+                musicIcon.classList.remove("is-playing");
+                musicPlayer.classList.remove("is-playing");
+                if (songPlayer.ended) {
+                    playerStatus.textContent = "SONG FINISHED";
+                    songMessage.textContent =
+                    "Wonderful singing! Play again! 🌟";
+                }   else {
+                        playerStatus.textContent = "SONG PAUSED";
+                        songMessage.textContent = "Ready to continue singing?";
+                    }
+            });
+
+            // Update progress bar and current time
+            songPlayer.addEventListener("timeupdate", () => {
+                currentTime.textContent = formatTime(songPlayer.currentTime);
+                if (
+                    Number.isFinite(songPlayer.duration) &&
+                    songPlayer.duration > 0
+                )   {
+                        songProgress.value =
+                        (songPlayer.currentTime / songPlayer.duration) * 100;
+                    }
+            });
+
+            // Allow users to seek by moving the progress bar
+            songProgress.addEventListener("input", () => {
+                if (
+                    Number.isFinite(songPlayer.duration) &&
+                    songPlayer.duration > 0
+                )   {
+                        songPlayer.currentTime =
+                        (Number(songProgress.value) / 100) * songPlayer.duration;
+                    }
+            });
+
+            // Reset player when song finishes
+            songPlayer.addEventListener("ended", () => {
+                songProgress.value = 0;
+                currentTime.textContent = "0:00";
+                playSong.textContent = "▶";
+                playSong.setAttribute("aria-label", "Play song");
+                playerStatus.textContent = "SONG FINISHED";
+                songMessage.textContent =
+                "Wonderful singing! Play again! 🌟";
+                musicIcon.classList.remove("is-playing");
+                musicPlayer.classList.remove("is-playing");
+            });
+            // Song file loading successfully
+            songPlayer.addEventListener("canplay", () => {
+                if (playerStatus.textContent === "LOADING SONG...") {
+                    playerStatus.textContent = "PRESS PLAY TO START";
+                }
+            });
+            // Song file loading error
+            songPlayer.addEventListener("error", () => {
+                playerStatus.textContent = "AUDIO FILE NOT FOUND";
+                songMessage.textContent ="Please check your ABC song file and its location.";
+                console.error("ABC song could not load. Expected file: audio/alphabet/A-Z songs.mp3");
+            });
+
+            // Initial player state
+            playSong.textContent = "▶";
+            currentTime.textContent = "0:00";
+            duration.textContent = "0:00";
+            songProgress.value = 0;
+            playerStatus.textContent = "PRESS PLAY TO START";
+            songMessage.textContent = "Ready to sing and learn? 🎵";
+        </script>
+    </body>
+</html>

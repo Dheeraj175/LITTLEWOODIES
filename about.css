@@ -1,0 +1,998 @@
+
+/* ========================================
+   LITTLEWOODIES - ABOUT PAGE
+   Complete Responsive CSS
+======================================== */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #075b49;
+    --dark-green: #064b3d;
+    --light-green: #eaf5e5;
+    --cream: #fffdf6;
+    --yellow: #fff3c5;
+    --text: #173c32;
+    --muted: #53665f;
+    --white: #ffffff;
+    --radius: 24px;
+    --shadow: 0 8px 25px rgba(7, 91, 73, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Baloo 2', cursive;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    color: var(--green);
+    margin-bottom: 18px;
+}
+
+p {
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   HEADER & NAVBAR
+======================================== */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 18px 5%;
+    background: var(--white);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 10;
+}
+
+header > div:first-child,
+header > div:last-child {
+    width: 100%;
+}
+
+header h1.brand-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--green);
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+}
+
+header h1 .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+/* Navbar layout */
+header nav.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Navbar links */
+header nav.navbar a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 17px;
+    border-radius: 12px;
+    color: var(--text);
+    background: transparent;
+    font-family: 'Baloo 2', cursive;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Hover */
+header nav.navbar a:hover {
+    background: #e4f3df;
+    color: var(--green);
+    transform: translateY(-2px);
+}
+
+/* Current page */
+header nav.navbar a.active {
+    background: var(--green);
+    color: var(--white);
+}
+
+/* Keep active link readable on hover */
+header nav.navbar a.active:hover {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+header nav.navbar a:focus-visible,
+.footer-links a:focus-visible,
+.footer-logo:focus-visible {
+    outline: 3px solid #e9b52c;
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   ABOUT PAGE CONTAINER
+======================================== */
+
+.about-page {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section {
+    padding: 65px 7%;
+}
+
+.image-frame {
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--light-green);
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--green);
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 50px;
+    background:
+        radial-gradient(
+            circle at 5% 10%,
+            #e1f0d8 0,
+            transparent 25%
+        ),
+        var(--cream);
+}
+
+.hero h1 {
+    font-size: clamp(2.3rem, 4.5vw, 4rem);
+    color: var(--green);
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero h1 span {
+    color: #f2bf38;
+}
+
+.hero-intro {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.hero-content > p:last-child {
+    max-width: 560px;
+}
+
+.hero-image {
+    height: 360px;
+    border-radius: 45% 24px 45% 24px;
+    border: 7px solid #e0efd6;
+    box-shadow: var(--shadow);
+}
+
+
+/* ========================================
+   WHAT WE DO
+======================================== */
+
+.what-we-do {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    background: var(--white);
+}
+
+.section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #dcefd2;
+    color: var(--green);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 12px;
+    background: var(--light-green);
+    border-radius: 20px;
+    color: var(--green);
+    font-size: 1.8rem;
+}
+
+.feature h3 {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.what-image {
+    height: 390px;
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.what-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-note {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: var(--green);
+    color: var(--white);
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 800;
+    transform: rotate(-4deg);
+}
+
+
+/* ========================================
+   OUR PURPOSE
+======================================== */
+
+.purpose {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 0.7fr;
+    align-items: center;
+    gap: 30px;
+    background: var(--light-green);
+    border-radius: var(--radius);
+    margin: 25px 3%;
+    padding: 35px;
+}
+
+.purpose-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.purpose-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.purpose-content .section-icon {
+    margin-bottom: 15px;
+}
+
+.purpose-content h2 {
+    margin-bottom: 12px;
+}
+
+.purpose-message {
+    text-align: center;
+    font-weight: 800;
+    color: var(--green);
+    font-size: 1.3rem;
+    transform: rotate(-4deg);
+}
+
+.purpose-message p {
+    color: var(--green);
+    font-weight: 800;
+}
+
+.purpose-message span {
+    display: inline-block;
+    margin-top: 5px;
+    color: #e17d79;
+    font-size: 1.6rem;
+}
+
+
+/* ========================================
+   LEARN BEYOND THE BOARD
+======================================== */
+
+.learning {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    background: #f5f9ef;
+    border-radius: var(--radius);
+    margin: 25px 3%;
+}
+
+.learning-content {
+    min-width: 0;
+}
+
+.learning-image {
+    height: 330px;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.learning-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.learning-note {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #e2f2d9;
+    padding: 15px 20px;
+    border-radius: 18px;
+    margin-top: 25px;
+}
+
+.learning-note > span {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.learning-note p {
+    font-size: 0.95rem;
+}
+
+.learning-note strong {
+    color: var(--green);
+}
+
+
+/* ========================================
+   OUR PROMISE
+======================================== */
+
+.promise {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: var(--yellow);
+    margin: 25px 3% 45px;
+    border-radius: var(--radius);
+    padding: 30px 5%;
+}
+
+.promise-icon {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ffe39a;
+    color: var(--green);
+    font-size: 2.5rem;
+}
+
+.promise-content h2 {
+    margin-bottom: 8px;
+}
+
+.promise-content p {
+    color: var(--green);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 800;
+}
+
+.promise-decoration {
+    margin-left: auto;
+    font-size: 3rem;
+    color: #4d9667;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #173d2a;
+    color: #fffdf7;
+    padding: 35px 7% 20px;
+}
+
+.footer-work {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.work {
+    min-width: 0;
+}
+
+.work-icon {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 27px;
+}
+
+.work h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--white);
+}
+
+.work p {
+    color: #cbdccf;
+    font-size: 13px;
+}
+
+
+/* FOOTER BRAND & LINKS */
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 35px 0;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.footer-logo span {
+    color: var(--white);
+    font-family: 'Baloo 2', cursive;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.slogan {
+    margin-top: 10px;
+    color: #b8d8b6;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
+    width: 100%;
+    max-width: 520px;
+}
+
+.footer-links > div {
+    min-width: 0;
+}
+
+.footer-links h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: #d0e1d2;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #a8e6a0;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: #cbdccf;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .section {
+        padding: 45px 5%;
+    }
+
+    .hero {
+        gap: 28px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .what-we-do {
+        gap: 30px;
+    }
+
+    .what-image {
+        height: 320px;
+    }
+
+    .purpose {
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 22px;
+    }
+
+    .purpose-message {
+        grid-column: 1 / -1;
+    }
+
+    .learning {
+        gap: 28px;
+    }
+
+    .learning-image {
+        height: 280px;
+    }
+
+    .footer-links {
+        gap: 35px;
+    }
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    header {
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    header h1.brand-name {
+        font-size: 23px;
+        gap: 8px;
+    }
+
+    header h1 .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    header nav.navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        width: 100%;
+    }
+
+    header nav.navbar a {
+        padding: 8px 11px;
+        font-size: 13px;
+        border-radius: 9px;
+    }
+
+    /* MAIN SECTIONS */
+
+    .section {
+        padding: 35px 22px;
+    }
+
+    .hero,
+    .what-we-do,
+    .learning {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.1rem, 8vw, 2.7rem);
+        margin-bottom: 18px;
+    }
+
+    .hero-intro {
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        height: 260px;
+        border-radius: 28px;
+        border-width: 5px;
+    }
+
+    .section-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+    }
+
+    .what-image {
+        height: 260px;
+    }
+
+    /* FEATURES */
+
+    .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 25px;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .feature h3 {
+        font-size: 0.9rem;
+    }
+
+    /* PURPOSE */
+
+    .purpose {
+        grid-template-columns: minmax(0, 1fr);
+        text-align: center;
+        margin: 20px 12px;
+        padding: 25px 20px;
+        gap: 15px;
+    }
+
+    .purpose-image {
+        height: 170px;
+    }
+
+    .purpose-content .section-icon {
+        margin: 0 auto 15px;
+    }
+
+    .purpose-message {
+        grid-column: auto;
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+
+    /* LEARNING */
+
+    .learning {
+        margin: 20px 12px;
+        padding: 25px 20px;
+    }
+
+    .learning-image {
+        height: 230px;
+    }
+
+    .learning-note {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    /* PROMISE */
+
+    .promise {
+        margin: 20px 12px 30px;
+        padding: 22px 18px;
+        gap: 14px;
+    }
+
+    .promise-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.8rem;
+    }
+
+    .promise-content {
+        min-width: 0;
+    }
+
+    .promise-content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 6px;
+    }
+
+    .promise-content p {
+        font-size: 1.15rem;
+    }
+
+    .promise-decoration {
+        display: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 30px 6% 18px;
+    }
+
+    .footer-work {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-bottom: 25px;
+    }
+
+    .work h3 {
+        font-size: 17px;
+    }
+
+    .footer-main {
+        gap: 25px;
+        padding: 28px 0;
+    }
+
+    .footer-logo img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .footer-logo span {
+        font-size: 21px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .footer-links h3 {
+        font-size: 16px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+}
+
+
+/* ========================================
+   EXTRA SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+
+    header {
+        padding: 13px 8px;
+    }
+
+    header h1.brand-name {
+        font-size: 20px;
+        gap: 7px;
+    }
+
+    header h1 .logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    header nav.navbar {
+        gap: 4px;
+    }
+
+    header nav.navbar a {
+        padding: 8px 9px;
+        font-size: 12px;
+    }
+
+    .section {
+        padding: 28px 16px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        height: 220px;
+    }
+
+    .features {
+        gap: 12px;
+    }
+
+    .feature h3 {
+        font-size: 0.82rem;
+    }
+
+    .purpose {
+        margin: 18px 10px;
+        padding: 22px 15px;
+    }
+
+    .learning {
+        margin: 18px 10px;
+        padding: 22px 15px;
+    }
+
+    .promise {
+        margin: 18px 10px 25px;
+        padding: 18px 14px;
+    }
+
+    .promise-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .promise-content p {
+        font-size: 1rem;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .footer-links h3 {
+        font-size: 14px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .footer-logo span {
+        font-size: 19px;
+    }
+}
+
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

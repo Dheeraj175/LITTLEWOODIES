@@ -1,0 +1,893 @@
+
+/* ========================================
+   LITTLEWOODIES - CONTACT PAGE
+   Complete Responsive CSS
+======================================== */
+
+/* 1. GLOBAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #075b49;
+    --dark-green: #064b3d;
+    --green-light: #eaf5e5;
+    --cream: #fffdf6;
+    --text: #173c32;
+    --muted: #66766f;
+    --border: #e1e9e3;
+    --white: #ffffff;
+    --yellow: #f0bd40;
+    --radius: 20px;
+    --shadow: 0 10px 35px rgba(23, 60, 50, 0.06);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Baloo 2', cursive;
+    line-height: 1.2;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   2. HEADER & NAVBAR
+======================================== */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 18px 5%;
+    background: var(--white);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 10;
+}
+
+header > div:first-child,
+header > div:last-child {
+    width: 100%;
+}
+
+header h1.brand-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: var(--green);
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+}
+
+header h1 .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+/* Four navigation options */
+
+header nav.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+}
+
+header nav.navbar a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 17px;
+    border-radius: 10px;
+    color: var(--text);
+    background: transparent;
+    font-family: 'Baloo 2', cursive;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Hover effect */
+
+header nav.navbar a:hover {
+    background: #e4f3df;
+    color: var(--green);
+}
+
+/* Active page only */
+
+header nav.navbar a.active {
+    background: var(--green);
+    color: var(--white);
+}
+
+header nav.navbar a.active:hover {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+/* Keyboard accessibility */
+
+header nav.navbar a:focus-visible,
+.footer-links a:focus-visible,
+.footer-logo:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   3. CONTACT PAGE CONTAINER
+======================================== */
+
+.contact-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 6%;
+}
+
+
+/* ========================================
+   4. HERO SECTION
+======================================== */
+
+.contact-hero {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.contact-hero h1 {
+    margin-bottom: 15px;
+    color: var(--green);
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.2;
+}
+
+.contact-hero h1 span {
+    color: var(--yellow);
+}
+
+.contact-hero p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+
+/* ========================================
+   5. CONTACT LAYOUT
+======================================== */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+.contact-info,
+.contact-form-box {
+    min-width: 0;
+    padding: 30px;
+    border-radius: 24px;
+}
+
+.contact-info {
+    background: var(--green-light);
+}
+
+.contact-form-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.contact-info h2,
+.contact-form-box h2 {
+    margin-bottom: 10px;
+    color: var(--green);
+    font-size: 25px;
+}
+
+.info-intro,
+.form-intro {
+    margin-bottom: 24px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* ========================================
+   6. CONTACT INFORMATION CARDS
+======================================== */
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    min-width: 0;
+    margin-top: 14px;
+    padding: 15px;
+    border: 1px solid rgba(7, 91, 73, 0.12);
+    border-radius: 16px;
+    background: var(--white);
+    color: var(--text);
+}
+
+a.contact-card {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+a.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(7, 91, 73, 0.09);
+}
+
+.contact-icon {
+    display: grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: var(--green-light);
+    font-size: 23px;
+}
+
+.contact-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.contact-text strong {
+    color: var(--text);
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.contact-text small {
+    color: var(--muted);
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.arrow {
+    flex-shrink: 0;
+    color: var(--green);
+    font-size: 20px;
+}
+
+.contact-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 25px;
+}
+
+.contact-note > span {
+    flex-shrink: 0;
+    font-size: 27px;
+}
+
+.contact-note p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.contact-note strong {
+    color: var(--green);
+}
+
+
+/* ========================================
+   7. CONTACT FORM
+======================================== */
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+#contactForm label {
+    margin: 15px 0 7px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+#contactForm input:not([type="checkbox"]),
+#contactForm select,
+#contactForm textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    outline: none;
+    background: var(--white);
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#contactForm input:not([type="checkbox"]),
+#contactForm select {
+    min-height: 48px;
+}
+
+#contactForm input:focus,
+#contactForm select:focus,
+#contactForm textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(7, 91, 73, 0.08);
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #89968d;
+}
+
+#contactForm textarea {
+    min-height: 115px;
+    resize: vertical;
+}
+
+#contactForm button {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 22px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: var(--green);
+    color: var(--white);
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#contactForm button:hover {
+    background: var(--dark-green);
+}
+
+#contactForm button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+#contactForm button:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
+}
+
+.h-captcha {
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+.form-disclaimer {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   8. FOOTER FEATURES
+======================================== */
+
+footer {
+    background: #173d2a;
+    color: #fffdf7;
+    padding: 35px 7% 20px;
+}
+
+.footer-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.feature {
+    min-width: 0;
+}
+
+.feature-icon {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 27px;
+}
+
+.feature h3 {
+    margin-bottom: 5px;
+    color: var(--white);
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.feature p {
+    color: #cbdccf;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   9. FOOTER BRAND & LINKS
+======================================== */
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 35px 0;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.footer-logo span {
+    color: var(--white);
+    font-family: 'Baloo 2', cursive;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.slogan {
+    margin-top: 10px;
+    color: #b8d8b6;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px;
+    width: 100%;
+    max-width: 520px;
+}
+
+.footer-links > div {
+    min-width: 0;
+}
+
+.footer-links h3 {
+    margin-bottom: 10px;
+    color: var(--white);
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: #d0e1d2;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #a8e6a0;
+}
+
+.copyright {
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+}
+
+.copyright p {
+    color: #cbdccf;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   10. TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 850px) {
+    .contact-page {
+        padding: 42px 5%;
+    }
+
+    .contact-layout {
+        gap: 20px;
+    }
+
+    .contact-info,
+    .contact-form-box {
+        padding: 24px 18px;
+    }
+
+    .contact-card {
+        gap: 10px;
+        padding: 13px 11px;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+    }
+}
+
+
+/* ========================================
+   11. MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 650px) {
+
+    /* Header */
+
+    header {
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    header h1.brand-name {
+        gap: 8px;
+        font-size: 23px;
+    }
+
+    header h1 .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    header nav.navbar {
+        gap: 5px;
+        width: 100%;
+    }
+
+    header nav.navbar a {
+        padding: 8px 11px;
+        font-size: 13px;
+    }
+
+    /* Hero */
+
+    .contact-page {
+        padding: 32px 16px;
+    }
+
+    .contact-hero {
+        margin-bottom: 30px;
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .contact-hero h1 {
+        font-size: clamp(34px, 9vw, 46px);
+    }
+
+    .contact-hero p {
+        font-size: 14px;
+    }
+
+    /* Stack content vertically */
+
+    .contact-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .contact-form-box {
+        order: 1;
+    }
+
+    .contact-info {
+        order: 2;
+    }
+
+    .contact-info,
+    .contact-form-box {
+        width: 100%;
+        padding: 24px 18px;
+        border-radius: 18px;
+    }
+
+    .contact-info h2,
+    .contact-form-box h2 {
+        font-size: 22px;
+    }
+
+    .info-intro,
+    .form-intro {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    /* Contact cards */
+
+    .contact-card {
+        gap: 10px;
+        padding: 13px 11px;
+        border-radius: 13px;
+    }
+
+    .contact-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .contact-text strong {
+        font-size: 13px;
+    }
+
+    .contact-text small {
+        font-size: 11px;
+    }
+
+    /* Form */
+
+    #contactForm label {
+        margin-top: 14px;
+        font-size: 13px;
+    }
+
+    #contactForm input:not([type="checkbox"]),
+    #contactForm select,
+    #contactForm textarea {
+        font-size: 16px;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 28px 18px 18px;
+    }
+
+    .footer-features {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-bottom: 25px;
+    }
+
+    .feature h3 {
+        font-size: 17px;
+    }
+
+    .footer-main {
+        gap: 25px;
+        padding: 28px 0;
+    }
+
+    .footer-logo img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .footer-logo span {
+        font-size: 21px;
+    }
+
+    .slogan {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .footer-links h3 {
+        font-size: 15px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .copyright p {
+        font-size: 11px;
+    }
+}
+
+
+/* ========================================
+   12. EXTRA SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+
+    header {
+        padding: 13px 8px;
+    }
+
+    header h1.brand-name {
+        font-size: 20px;
+        gap: 7px;
+    }
+
+    header h1 .logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    header nav.navbar {
+        gap: 4px;
+    }
+
+    header nav.navbar a {
+        padding: 8px 9px;
+        font-size: 12px;
+    }
+
+    .contact-page {
+        padding: 26px 12px;
+    }
+
+    .contact-info,
+    .contact-form-box {
+        padding: 20px 14px;
+    }
+
+    .contact-card {
+        gap: 8px;
+        padding: 11px 9px;
+    }
+
+    .contact-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+    }
+
+    .contact-text strong {
+        font-size: 12px;
+    }
+
+    .contact-text small {
+        font-size: 10px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .footer-links h3 {
+        font-size: 14px;
+    }
+
+    .footer-logo span {
+        font-size: 19px;
+    }
+}
+
+
+/* ========================================
+   13. ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

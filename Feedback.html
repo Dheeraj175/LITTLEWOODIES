@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover LITTLEWOODIES, where kids learn, play, and grow with wooden learning products designed to inspire creativity, curiosity, and fun.">
+        <!-- Google Fonts: Same as Learn Page -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- LOGO AND TITTLE -->
+        <link rel="icon" type="image/jpeg" href="logo.jpeg">
+        <title>Feedback & Suggestions | LITTLEWOODIES</title>
+        <link rel="stylesheet" href="Feedback.css">
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <h1 class="brand-name">
+                    <img class="logo" src="image/logo.jpeg" alt="LITTLEWOODIES Logo">
+                    LITTLEWOODIES
+                </h1>
+            </div>
+            <div>
+                <nav class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="Feedback.html" class="active">Feedback</a>
+                </nav>
+            </div>
+        </header>
+        
+        <main class="feedback-container">
+            <section class="feedback-intro">
+                <span class="intro-icon">🥰</span>
+                <h2>We Value Your Feedback!</h2>
+                <p>At LITTLEWOODIES, your feedback helps us grow. Share your experience, ideas, and suggestions to help us make learning more fun for every child.</p>
+            </section>
+
+            <!-- FEEDBACK FORM -->
+            <section class="feedback-card">
+                <h2>Share Your Thoughts</h2>
+                <p class="form-description">We'd love to hear from you. Please fill out the form below.</p>
+                <form id="feedbackForm">
+                    <!-- NAME -->
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required>
+                    </div>
+                
+                    <!-- FEEDBACK CATEGORY -->
+                    <div class="form-group">
+                        <label for="category">Feedback About *</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="Products">Our Products</option>
+                            <option value="Listen and Learn">Listen & Learn</option>
+                            <option value="Website">Website Experience</option>
+                            <option value="Customer Service">Customer Service</option>
+                            <option value="Suggestion">Suggestion / New Idea</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <!-- STAR RATING -->
+                    <div class="form-group">
+                        <label>How was your experience? *</label>
+                        <div class="rating" role="radiogroup" aria-label="Rate your experience">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5" title="5 hearts">💖</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="4 hearts">💖</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="3 hearts">💖</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="2 hearts">💖</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="1 heart">💖</label>
+                        </div>
+                        <p class="rating-hint">Select a rating from 1 to 5 stars.</p>
+                    </div>
+
+                    <!-- FEEDBACK MESSAGE -->
+                    <div class="form-group">
+                        <label for="message">Your Feedback & Suggestions *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us what you liked or what we can improve..." required></textarea>
+                    </div>
+
+                    <!-- RECOMMENDATION -->
+                    <div class="recommendation">
+                        <input type="checkbox" id="recommend" name="recommend" value="Yes">
+                        <label for="recommend">I would recommend LITTLEWOODIES to others.</label>
+                    </div>
+
+                    <!-- SUBMIT -->
+                    <button type="submit" class="submit-btn">Submit Feedback →</button>
+
+                    <p class="privacy-note">🌟 Thank you for helping LITTLEWOODIES grow!</p>
+                    <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <!-- THANK YOU SECTION -->
+            <section class="thank-you">
+                <h2>🌱 Every Suggestion Helps Us Grow</h2>
+                <p>Your ideas inspire us to create better products and a happier learning experience for children.</p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-features">
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">🍃</span>
+                    <h3>Thoughtfully Designed</h3>
+                    <p>Made with little learners in mind.</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">🎓</span>
+                    <h3>Boosts Learning</h3>
+                    <p>Discover joyful ways to learn and play</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">💖</span>
+                    <h3>Made with Care</h3>
+                    <p>Every little detail matters to us</p>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img class="logo" src="image/logo.jpeg" alt="Littlewoodies Logo">
+                        <span>LITTLEWOODIES</span>
+                    </a>
+                    <p class="slogan">LEARN • PLAY • GROW</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h3>Explore</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Learn.html">Listen & Learn</a></li>
+                            <li><a href="Products.html">Other Products</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>About & Support</h3>
+                        <ul>
+                            <li><a href="About.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="Feedback.html">Feedback & Suggestions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 LITTLEWOODIES. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            const feedbackForm = document.getElementById("feedbackForm");
+            const formMessage = document.getElementById("formMessage");
+            const submitButton = feedbackForm.querySelector(".submit-btn");
+            const scriptURL = "https://script.google.com/macros/s/AKfycbyG1cnN9stsLrsm5g4NWhNHU80QIREHa5HDkrCD6lj-Mi4LILB1Z_4FLYF125mwGFwEyA/exec";
+            feedbackForm.addEventListener("submit", async function(event) {
+                event.preventDefault();
+                if (!feedbackForm.reportValidity()) {
+                    return;
+                }
+                if (!scriptURL.startsWith("https://script.google.com/macros/s/") ||
+                    !scriptURL.endsWith("/exec")) {
+                        formMessage.textContent =
+                            "Please configure the Google Apps Script URL first.";
+                        formMessage.classList.add("visible");
+                    return;
+                }
+                    submitButton.disabled = true;
+                    submitButton.textContent = "Submitting...";
+                    formMessage.classList.add("visible");
+                    formMessage.textContent = "Submitting your feedback...";
+                try {
+                    const formData = new FormData(feedbackForm);
+                    const data = new URLSearchParams();
+                    for (const [key, value] of formData.entries()) {
+                    data.append(key, value);
+                    }
+                    await fetch(scriptURL, {
+                        method: "POST",
+                        mode: "no-cors",
+                        body: data
+                    });
+                    formMessage.textContent =
+                        "Your feedback request has been sent. 😍";
+                    feedbackForm.reset();
+                } 
+                catch (error) {
+                    formMessage.textContent =
+                    "We could not send your feedback. Please check your internet connection and try again.";
+                }
+                finally {
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Submit Feedback →";
+                }
+             });
+        </script>
+    </body>
+</html>

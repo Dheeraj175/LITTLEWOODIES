@@ -1,0 +1,901 @@
+
+/* =========================================
+   LITTLEWOODIES - FEEDBACK PAGE
+   Complete Responsive CSS
+========================================= */
+
+/* 1. BASIC RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #28633c;
+    --dark-green: #173d2a;
+    --cream: #fffdf7;
+    --light-green: #e4f3df;
+    --white: #ffffff;
+    --text: #293b2c;
+    --muted: #657267;
+    --border: #d7e2d2;
+    --yellow: #e9b52c;
+    --shadow: 0 6px 25px rgba(37, 75, 40, 0.07);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Baloo 2', cursive;
+    line-height: 1.25;
+}
+
+
+/* =========================================
+   2. HEADER & NAVBAR
+========================================= */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 18px 5%;
+    background: var(--white);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+}
+
+header > div:first-child,
+header > div:last-child {
+    width: 100%;
+}
+
+header h1.brand-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: var(--green);
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+}
+
+header h1 .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Navigation: exactly four links */
+
+header nav.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+}
+
+header nav.navbar a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 17px;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text);
+    font-family: 'Baloo 2', cursive;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+header nav.navbar a:hover {
+    background: var(--light-green);
+    color: var(--green);
+}
+
+/* Feedback is the active page */
+
+header nav.navbar a.active {
+    background: var(--green);
+    color: var(--white);
+}
+
+header nav.navbar a.active:hover {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+header nav.navbar a:focus-visible,
+.footer-links a:focus-visible,
+.footer-logo:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   3. MAIN FEEDBACK CONTAINER
+========================================= */
+
+.feedback-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+
+/* =========================================
+   4. INTRO SECTION
+========================================= */
+
+.feedback-intro {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.intro-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: var(--light-green);
+    font-size: 35px;
+    box-shadow: 0 5px 15px rgba(40, 99, 60, 0.08);
+}
+
+.feedback-intro h2 {
+    margin-bottom: 12px;
+    color: var(--green);
+    font-size: clamp(28px, 4vw, 36px);
+}
+
+.feedback-intro p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   5. FEEDBACK CARD
+========================================= */
+
+.feedback-card {
+    padding: 35px;
+    border: 1px solid #e3ecdd;
+    border-radius: 22px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.feedback-card > h2 {
+    margin-bottom: 7px;
+    color: var(--green);
+    font-size: 27px;
+}
+
+.form-description {
+    margin-bottom: 28px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* =========================================
+   6. FORM ELEMENTS
+========================================= */
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 13px 15px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    outline: none;
+    background: #fffefa;
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    min-height: 49px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(40, 99, 60, 0.10);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #899489;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+select {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   7. HEART RATING
+========================================= */
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.rating input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.rating label {
+    display: inline-block;
+    font-size: 36px;
+    line-height: 1.4;
+    cursor: pointer;
+    filter: grayscale(1);
+    opacity: 0.45;
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.rating label:hover {
+    transform: scale(1.2) rotate(-6deg);
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.rating input:focus-visible + label {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+    border-radius: 5px;
+}
+
+.rating input:checked + label {
+    transform: scale(1.12);
+}
+
+.rating-hint {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* =========================================
+   8. RECOMMENDATION CHECKBOX
+========================================= */
+
+.recommendation {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.recommendation input {
+    width: 18px;
+    height: 18px;
+    margin-top: 5px;
+    accent-color: var(--green);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.recommendation label {
+    color: #465747;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   9. SUBMIT BUTTON
+========================================= */
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background: var(--green);
+    color: var(--white);
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.submit-btn:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+}
+
+
+/* =========================================
+   10. PRIVACY NOTE & FORM MESSAGE
+========================================= */
+
+.privacy-note {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+}
+
+.form-message {
+    display: none;
+    margin-top: 18px;
+    padding: 13px 15px;
+    border-radius: 10px;
+    background: var(--light-green);
+    color: var(--dark-green);
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.form-message.visible {
+    display: block;
+}
+
+
+/* =========================================
+   11. THANK YOU SECTION
+========================================= */
+
+.thank-you {
+    margin-top: 30px;
+    padding: 30px 20px;
+    border: 1px solid #dcebd6;
+    border-radius: 18px;
+    background: #edf6e9;
+    text-align: center;
+}
+
+.thank-you h2 {
+    margin-bottom: 9px;
+    color: var(--green);
+    font-size: 25px;
+}
+
+.thank-you p {
+    max-width: 550px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* =========================================
+   12. FOOTER
+========================================= */
+
+footer {
+    padding: 35px 7% 20px;
+    background: #173d2a;
+    color: #fffdf7;
+}
+
+/* Footer features */
+
+.footer-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+}
+
+.feature {
+    min-width: 0;
+}
+
+.feature-icon {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 28px;
+}
+
+.feature h3 {
+    margin-bottom: 5px;
+    color: var(--white);
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.feature p {
+    color: #cbdccf;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   13. FOOTER BRAND & LINKS
+========================================= */
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 35px 0;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.footer-logo span {
+    color: var(--white);
+    font-family: 'Baloo 2', cursive;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.slogan {
+    margin-top: 10px;
+    color: #b8d8b6;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px;
+    width: 100%;
+    max-width: 520px;
+}
+
+.footer-links > div {
+    min-width: 0;
+}
+
+.footer-links h3 {
+    margin-bottom: 10px;
+    color: var(--white);
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: #d0e1d2;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #a8e6a0;
+}
+
+.copyright {
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: #cbdccf;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* =========================================
+   14. TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+    .feedback-container {
+        max-width: 750px;
+        margin: 38px auto;
+    }
+
+    .feedback-card {
+        padding: 28px;
+    }
+
+    .footer-links {
+        gap: 30px;
+    }
+}
+
+
+/* =========================================
+   15. MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    header {
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    header h1.brand-name {
+        gap: 8px;
+        font-size: 23px;
+    }
+
+    header h1 .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    header nav.navbar {
+        gap: 5px;
+    }
+
+    header nav.navbar a {
+        padding: 8px 11px;
+        font-size: 13px;
+    }
+
+    /* Main content */
+
+    .feedback-container {
+        margin: 30px auto;
+        padding: 0 16px;
+    }
+
+    .feedback-intro {
+        margin-bottom: 27px;
+    }
+
+    .intro-icon {
+        width: 62px;
+        height: 62px;
+        font-size: 30px;
+    }
+
+    .feedback-intro h2 {
+        font-size: 28px;
+    }
+
+    .feedback-intro p {
+        font-size: 14px;
+    }
+
+    /* Feedback card */
+
+    .feedback-card {
+        padding: 24px 18px;
+        border-radius: 18px;
+    }
+
+    .feedback-card > h2 {
+        font-size: 24px;
+    }
+
+    .form-description {
+        margin-bottom: 22px;
+        font-size: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group > label {
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        padding: 13px;
+        font-size: 16px;
+    }
+
+    /* Rating */
+
+    .rating {
+        gap: 5px;
+    }
+
+    .rating label {
+        font-size: 32px;
+    }
+
+    /* Recommendation */
+
+    .recommendation label {
+        font-size: 13px;
+    }
+
+    .submit-btn {
+        font-size: 15px;
+    }
+
+    /* Thank you */
+
+    .thank-you {
+        padding: 24px 16px;
+    }
+
+    .thank-you h2 {
+        font-size: 22px;
+    }
+
+    .thank-you p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 28px 18px 18px;
+    }
+
+    .footer-features {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-bottom: 25px;
+    }
+
+    .feature h3 {
+        font-size: 17px;
+    }
+
+    .feature p {
+        font-size: 13px;
+    }
+
+    .footer-main {
+        gap: 25px;
+        padding: 28px 0;
+    }
+
+    .footer-logo img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .footer-logo span {
+        font-size: 21px;
+    }
+
+    .slogan {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .footer-links {
+        gap: 18px;
+    }
+
+    .footer-links h3 {
+        font-size: 15px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   16. EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+    header {
+        padding: 13px 8px;
+    }
+
+    header h1.brand-name {
+        gap: 7px;
+        font-size: 20px;
+    }
+
+    header h1 .logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    header nav.navbar {
+        gap: 4px;
+    }
+
+    header nav.navbar a {
+        padding: 8px 9px;
+        font-size: 12px;
+    }
+
+    .feedback-container {
+        padding: 0 12px;
+    }
+
+    .feedback-card {
+        padding: 21px 14px;
+    }
+
+    .rating {
+        gap: 4px;
+    }
+
+    .rating label {
+        font-size: 29px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .footer-logo span {
+        font-size: 19px;
+    }
+
+    .footer-links h3 {
+        font-size: 14px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   17. REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

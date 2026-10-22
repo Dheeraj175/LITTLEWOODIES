@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LITTLEWOODIES के साथ हिंदी स्वर और व्यंजन सीखें।">
+    <meta name="google" content="notranslate">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="image/logo.jpeg">
+    <title>Hindi Varnamala Learning | LITTLEWOODIES</title>
+    <link rel="stylesheet" href="hindi.css">
+</head>
+<body>
+
+<header class="page-header">
+    <a href="Learn.html" class="nav-link previous-link">← पिछले पेज पर</a>
+    <a href="index.html" class="brand" aria-label="LITTLEWOODIES Home">
+        <img src="image/logo.jpeg" alt="LITTLEWOODIES Logo">
+        <span>LITTLEWOODIES</span>
+    </a>
+    <a href="index.html" class="nav-link home-link">🏠 Home</a>
+</header>
+
+<main class="learning-page">
+
+    <section class="intro">
+        <span class="intro-tag">🌱 LITTLEWOODIES LEARNING CORNER</span>
+        <h1>आओ हिंदी वर्णमाला सीखें!</h1>
+        <p>अक्षर पर टैप करें, उससे जुड़ा चित्र देखें और उसकी आवाज़ सुनें।</p>
+        <div class="intro-decor" aria-hidden="true">
+            <span>🌼</span><span>🧸</span><span>🌈</span><span>⭐</span>
+        </div>
+    </section>
+
+    <!-- SWAR SECTION -->
+    <section class="varnamala-section swar-section" aria-labelledby="swarHeading">
+        <div class="section-heading">
+            <span class="section-kicker">भाग 1 • SWAR</span>
+            <h2 id="swarHeading">🌸 स्वर सीखें</h2>
+            <p>स्वर पर टैप करें और उससे जुड़ा चित्र देखें।</p>
+        </div>
+        <div class="alphabet-grid" id="swarGrid" aria-label="हिंदी स्वर सीखने के बटन"></div>
+    </section>
+
+    <!-- VYANJAN SECTION -->
+    <section class="varnamala-section vyanjan-section" aria-labelledby="vyanjanHeading">
+        <div class="section-heading">
+            <span class="section-kicker">भाग 2 • VYANJAN</span>
+            <h2 id="vyanjanHeading">🌿 व्यंजन सीखें</h2>
+            <p>हर व्यंजन पर टैप करके उससे जुड़ा उदाहरण जानें।</p>
+        </div>
+        <div class="alphabet-grid" id="vyanjanGrid" aria-label="हिंदी व्यंजन सीखने के बटन"></div>
+    </section>
+
+    <p class="instructions">👆 किसी भी अक्षर पर टैप करके उसका चित्र और आवाज़ देखें।</p>
+    <p id="audioStatus" class="audio-status" role="status" aria-live="polite">
+        चलो, कोई अक्षर चुनें! ✨
+    </p>
+
+    <!-- ONE SHARED HINDI SONG PLAYER -->
+    <section class="song-section">
+        <div class="song-top">
+            <div class="song-icon" id="musicIcon" aria-hidden="true">🎵</div>
+            <div class="song-details">
+                <span class="song-label">🎉 SUNO • BOLO • SEEKHO</span>
+                <h2>वर्णमाला गीत का समय!</h2>
+                <p>गीत सुनें और स्वर-व्यंजन साथ-साथ दोहराएँ।</p>
+            </div>
+            <div class="song-stars" aria-hidden="true">🌟🎈</div>
+        </div>
+
+        <div class="music-player">
+            <div class="player-heading">
+                <span class="equalizer" aria-hidden="true">♫</span>
+                <div>
+                    <h3>हिंदी वर्णमाला गीत</h3>
+                    <p id="songMessage">गीत सुनने के लिए Play दबाएँ।</p>
+                </div>
+                <span class="music-note" aria-hidden="true">🎶</span>
+            </div>
+
+            <div class="player-controls">
+                <button type="button" id="playSong" class="play-button" aria-label="गीत चलाएँ">▶</button>
+                <div class="track-area">
+                    <div class="track-labels">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                    <input id="songProgress" class="song-progress" type="range"
+                        min="0" max="100" value="0" aria-label="गीत की प्रगति">
+                </div>
+            </div>
+
+            <div class="player-bottom">
+                <span>🎧 सुनें और साथ में बोलें</span>
+                <span id="playerStatus">PLAY दबाकर शुरू करें</span>
+            </div>
+
+            <audio id="songPlayer" preload="metadata">
+                <source src="./audio/hindi/varnamalasong.mpeg" type="audio/mpeg">
+                आपका ब्राउज़र ऑडियो चलाने में सहायता नहीं करता।
+            </audio>
+        </div>
+
+        <div class="song-rainbow" aria-hidden="true">🌈 🌼 🪁 🦋 ⭐ 🎈</div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-features">
+        <div class="feature">
+            <span class="feature-icon" aria-hidden="true">🍃</span>
+            <h3>Thoughtfully Designed</h3>
+            <p>Made with little learners in mind.</p>
+        </div>
+        <div class="feature">
+            <span class="feature-icon" aria-hidden="true">🎓</span>
+            <h3>Boosts Learning</h3>
+            <p>Discover joyful ways to learn and play</p>
+        </div>
+        <div class="feature">
+            <span class="feature-icon" aria-hidden="true">💖</span>
+            <h3>Made with Care</h3>
+            <p>Every little detail matters to us</p>
+        </div>
+    </div>
+
+    <div class="footer-main">
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <img class="logo" src="image/logo.jpeg" alt="LITTLEWOODIES Logo">
+                <span>LITTLEWOODIES</span>
+            </a>
+            <p class="slogan">LEARN • PLAY • GROW</p>
+        </div>
+
+        <div class="footer-links">
+            <div>
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Learn.html">Listen &amp; Learn</a></li>
+                    <li><a href="Products.html">Other Products</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>About &amp; Support</h3>
+                <ul>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="Feedback.html">Feedback &amp; Suggestions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 LITTLEWOODIES. All rights reserved.</p>
+    </div>
+</footer>
+
+<audio id="letterAudio" preload="none"></audio>
+
+<script>
+    // स्वर और उनके उदाहरण
+    const swars = [
+        { letter: "अ", word: "अनार", emoji: "🍎" },
+        { letter: "आ", word: "आम", emoji: "🥭" },
+        { letter: "इ", word: "इमली", emoji: "🌿" },
+        { letter: "ई", word: "ईख", emoji: "🎋" },
+        { letter: "उ", word: "उल्लू", emoji: "🦉" },
+        { letter: "ऊ", word: "ऊँट", emoji: "🐪 " },
+        { letter: "ऋ", word: "ऋषि", emoji: "🧘" },
+        { letter: "ए", word: "एड़ी", emoji: "🦶" },
+        { letter: "ऐ", word: "ऐनक", emoji: "👓" },
+        { letter: "ओ", word: "ओखली", emoji: "🥣" },
+        { letter: "औ", word: "औरत", emoji: "👩" },
+        { letter: "अं", word: "अंगूर", emoji: "🍇" },
+        { letter: "अः", word: "अः", emoji: "⬜" }
+    ];
+
+    // व्यंजन और उनके उदाहरण
+    const vyanjans = [
+        { letter: "क", word: "कबूतर", emoji: "🕊️" },
+        { letter: "ख", word: "खरगोश", emoji: "🐰" },
+        { letter: "ग", word: "गमला", emoji: "🪴" },
+        { letter: "घ", word: "घर", emoji: "🏠" },
+        { letter: "ङ", word: "ङ", emoji: "⬜" },
+        { letter: "च", word: "चम्मच", emoji: "🥄" },
+        { letter: "छ", word: "छतरी", emoji: "☂️" },
+        { letter: "ज", word: "जहाज़", emoji: "🚢" },
+        { letter: "झ", word: "झंडा", emoji: "🚩" },
+        { letter: "ञ", word: "ञ", emoji: "⬜" },
+        { letter: "ट", word: "टमाटर", emoji: "🍅" },
+        { letter: "ठ", word: "ठेला", emoji: "🛒" },
+        { letter: "ड", word: "डमरू", emoji: "🥁" },
+        { letter: "ढ", word: "ढक्कन", emoji: "🫙" },
+        { letter: "ण", word: "ण", emoji: "⬜" },
+        { letter: "त", word: "तरबूज", emoji: "🍉" },
+        { letter: "थ", word: "थर्मस", emoji: "🧴" },
+        { letter: "द", word: "दरवाज़ा", emoji: "🚪" },
+        { letter: "ध", word: "धनुष", emoji: "🏹" },
+        { letter: "न", word: "नल", emoji: "🚰" },
+        { letter: "प", word: "पतंग", emoji: "🪁" },
+        { letter: "फ", word: "फल", emoji: "🍓" },
+        { letter: "ब", word: "बतख", emoji: "🦆" },
+        { letter: "भ", word: "भालू", emoji: "🐻" },
+        { letter: "म", word: "मछली", emoji: "🐟" },
+        { letter: "य", word: "योग", emoji: "🧘" },
+        { letter: "र", word: "रथ", emoji: "🛺" },
+        { letter: "ल", word: "लड्डू", emoji: "🍬" },
+        { letter: "व", word: "विमान", emoji: "✈️" },
+        { letter: "श", word: "शेर", emoji: "🦁" },
+        { letter: "ष", word: "षट्कोण", emoji: "⬡" },
+        { letter: "स", word: "सूरज", emoji: "☀️" },
+        { letter: "ह", word: "हाथी", emoji: "🐘" },
+        { letter: "क्ष", word: "क्षमा", emoji: "🙏" },
+        { letter: "त्र", word: "त्रिशूल", emoji: "🔱" },
+        { letter: "ज्ञ", word: "ज्ञान", emoji: "📚" }
+    ];
+
+    const letterAudio = document.getElementById("letterAudio");
+    const audioStatus = document.getElementById("audioStatus");
+
+    function createLetterCards(items, gridId) {
+        const grid = document.getElementById(gridId);
+
+        items.forEach(({ letter, word, emoji }, index) => {
+            const card = document.createElement("article");
+            card.className = "letter-card";
+            card.style.setProperty("--card-index", index);
+
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "wooden-letter";
+            button.textContent = letter;
+            button.setAttribute("aria-label", `${letter}, ${word}`);
+            button.setAttribute("aria-pressed", "false");
+
+            const sentence = document.createElement("p");
+            sentence.className = "letter-sentence";
+            sentence.textContent = `${letter} से ${word}`;
+
+            button.addEventListener("click", async () => {
+                clearTimeout(button.resetTimer);
+
+                button.textContent = emoji;
+                button.classList.add("revealed");
+                button.setAttribute("aria-label", `${letter} से ${word}`);
+                button.setAttribute("aria-pressed", "true");
+
+                button.resetTimer = setTimeout(() => {
+                    button.textContent = letter;
+                    button.classList.remove("revealed");
+                    button.setAttribute("aria-label", `${letter}, ${word}`);
+                    button.setAttribute("aria-pressed", "false");
+                }, 4000);
+
+                letterAudio.pause();
+                letterAudio.currentTime = 0;
+                letterAudio.src = `./audio/hindi/${letter}.mpeg`;
+                audioStatus.textContent = `🔊 ${letter} से ${word}`;
+
+                try {
+                    await letterAudio.play();
+                } catch (error) {
+                    audioStatus.textContent =
+                        `${letter} की आवाज़ नहीं चल पाई। audio/hindi फ़ोल्डर में ${letter}.mpeg फ़ाइल जाँचें।`;
+                    console.error("Letter audio error:", error);
+                }
+            });
+
+            card.append(button, sentence);
+            grid.appendChild(card);
+        });
+    }
+
+    createLetterCards(swars, "swarGrid");
+    createLetterCards(vyanjans, "vyanjanGrid");
+
+    letterAudio.addEventListener("ended", () => {
+        audioStatus.textContent = "🌟 बहुत अच्छा! अब कोई दूसरा अक्षर चुनें।";
+    });
+
+    letterAudio.addEventListener("error", () => {
+        audioStatus.textContent =
+            "अक्षर की आवाज़ लोड नहीं हुई। कृपया audio/hindi फ़ाइलों का नाम और पाथ जाँचें।";
+    });
+
+    // Shared song player
+    const songPlayer = document.getElementById("songPlayer");
+    const playSong = document.getElementById("playSong");
+    const songProgress = document.getElementById("songProgress");
+    const currentTime = document.getElementById("currentTime");
+    const duration = document.getElementById("duration");
+    const songMessage = document.getElementById("songMessage");
+    const playerStatus = document.getElementById("playerStatus");
+    const musicIcon = document.getElementById("musicIcon");
+    const musicPlayer = document.querySelector(".music-player");
+
+    function formatTime(seconds) {
+        if (!Number.isFinite(seconds) || seconds < 0) return "0:00";
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+        return `${minutes}:${String(remainingSeconds).padStart(2, "0")}`;
+    }
+
+    songPlayer.addEventListener("loadedmetadata", () => {
+        duration.textContent = formatTime(songPlayer.duration);
+    });
+
+    playSong.addEventListener("click", async () => {
+        if (songPlayer.paused) {
+            try {
+                await songPlayer.play();
+            } catch (error) {
+                playerStatus.textContent = "गीत नहीं चल पाया";
+                songMessage.textContent =
+                    "audio/hindi/swarsong.mpeg का नाम और पाथ जाँचें।";
+                console.error("Song playback error:", error);
+            }
+        } else {
+            songPlayer.pause();
+        }
+    });
+
+    songPlayer.addEventListener("play", () => {
+        playSong.textContent = "Ⅱ";
+        playSong.setAttribute("aria-label", "गीत रोकें");
+        playerStatus.textContent = "गीत चल रहा है ♪";
+        songMessage.textContent = "आओ, साथ में गाएँ! 🎵";
+        musicIcon.classList.add("is-playing");
+        musicPlayer.classList.add("is-playing");
+    });
+
+    songPlayer.addEventListener("pause", () => {
+        playSong.textContent = "▶";
+        playSong.setAttribute("aria-label", "गीत चलाएँ");
+        musicIcon.classList.remove("is-playing");
+        musicPlayer.classList.remove("is-playing");
+
+        if (songPlayer.ended) {
+            playerStatus.textContent = "गीत पूरा हुआ";
+            songMessage.textContent = "बहुत बढ़िया! फिर से सुनें। 🌟";
+        } else {
+            playerStatus.textContent = "गीत रुका हुआ है";
+            songMessage.textContent = "जब चाहें फिर से शुरू करें।";
+        }
+    });
+
+    songPlayer.addEventListener("timeupdate", () => {
+        currentTime.textContent = formatTime(songPlayer.currentTime);
+
+        if (Number.isFinite(songPlayer.duration) && songPlayer.duration > 0) {
+            songProgress.value =
+                (songPlayer.currentTime / songPlayer.duration) * 100;
+        }
+    });
+
+    songProgress.addEventListener("input", () => {
+        if (Number.isFinite(songPlayer.duration) && songPlayer.duration > 0) {
+            songPlayer.currentTime =
+                (Number(songProgress.value) / 100) * songPlayer.duration;
+        }
+    });
+
+    songPlayer.addEventListener("ended", () => {
+        songProgress.value = 0;
+        currentTime.textContent = "0:00";
+        playSong.textContent = "▶";
+        playSong.setAttribute("aria-label", "गीत चलाएँ");
+        playerStatus.textContent = "गीत पूरा हुआ";
+        songMessage.textContent = "बहुत बढ़िया! फिर से सुनें। 🌟";
+        musicIcon.classList.remove("is-playing");
+        musicPlayer.classList.remove("is-playing");
+    });
+
+    songPlayer.addEventListener("error", () => {
+        playerStatus.textContent = "ऑडियो फ़ाइल नहीं मिली";
+        songMessage.textContent =
+            "audio/hindi/swarsong.mpeg फ़ाइल का नाम और लोकेशन जाँचें।";
+        console.error("Hindi song could not load: audio/hindi/swarsong.mpeg");
+    });
+
+    playSong.textContent = "▶";
+    currentTime.textContent = "0:00";
+    duration.textContent = "0:00";
+    songProgress.value = 0;
+    playerStatus.textContent = "PLAY दबाकर शुरू करें";
+    songMessage.textContent = "गीत सुनने के लिए तैयार? 🎵";
+</script>
+
+</body>
+</html>

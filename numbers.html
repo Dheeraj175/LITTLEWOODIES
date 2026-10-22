@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover LITTLEWOODIES, where kids learn, play, and grow with wooden learning products designed to inspire creativity, curiosity, and fun.">
+        <!-- Google Fonts: Same as Learn Page -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- LOGO AND TITTLE -->
+        <link rel="icon" type="image/jpeg" href="logo.jpeg">
+        <title>Numbers Learning | LITTLEWOODIES</title>
+        <link rel="stylesheet" href="numbers.css">
+
+    </head>
+
+    <body>
+
+        <header class="page-header">
+            <a href="Learn.html" class="nav-link">← Previous Page</a>
+            <div class="brand" aria-label="LITTLEWOODIES Home">
+                <img src="image/logo.jpeg" alt="LITTLEWOODIES Logo">
+                <span>LITTLEWOODIES</span>
+            </div>
+            <a href="index.html" class="nav-link home-link">🏠 Home</a>
+        </header>
+        
+        <main class="learning-page">
+            
+            <section class="intro">
+                <span class="intro-tag">🌱 LITTLEWOODIES LEARNING CORNER</span>
+                <h1>Let's Learn Numbers!</h1>
+                <p>Tap a wooden number, discover a fun picture, and listen to its name!</p>
+                <div class="intro-decor" aria-hidden="true">
+                    <span>🍃</span>
+                    <span>🧸</span>
+                    <span>🌈</span>
+                    <span>⭐</span>
+                </div>
+            </section>
+
+            <section class="numbers-section">
+                <div class="section-heading">
+                    <h2>🔢 Meet Your Number Friends!</h2>
+                    <p>Tap any number to see its picture and hear its name.</p>
+                </div>
+                <div class="numbers-grid" id="numbersGrid" aria-label="Number learning buttons"></div>
+            </section>
+
+            <p class="instructions">👆 Tap a number to reveal its picture and hear the sound!</p>
+            <p id="audioStatus" class="audio-status" role="status" aria-live="polite"></p>
+
+            <!-- CREATIVE NUMBERS MUSIC PLAYER -->
+            <section class="song-section">
+                <div class="song-top">
+                    <div class="song-icon" id="musicIcon" aria-hidden="true">🎵</div>
+                    <div class="song-details">
+                        <span class="song-label">🎉 SING • COUNT • LEARN</span>
+                        <h2>It's Counting Song Time!</h2>
+                        <p>Clap your hands and count from 1 to 20!</p>
+                    </div>
+                    <div class="song-stars" aria-hidden="true">🌟🎈</div>
+                </div>
+                <div class="music-player">
+                    <div class="player-heading">
+                        <span class="equalizer" aria-hidden="true">♫</span>
+                        <div>
+                            <h3>My Counting Song</h3>
+                            <p id="songMessage">Ready to sing and count?</p>
+                        </div>
+                        <span class="music-note" aria-hidden="true">🎶</span>
+                    </div>
+                    <div class="player-controls">
+                        <button type="button" id="playSong" class="play-button" aria-label="Play counting song">▶</button>
+                        <div class="track-area">
+                            <div class="track-labels">
+                                <span id="currentTime">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                            <input id="songProgress" class="song-progress" type="range" min="0" max="100" value="0" aria-label="Song progress">
+                        </div>
+                    </div>
+                    <div class="player-bottom">
+                        <span>🎧 Listen and sing along</span>
+                        <span id="playerStatus">PRESS PLAY TO START</span>
+                    </div>
+                    <audio id="songPlayer" preload="metadata">
+                        <source src="./audio/numbers/numbersong.mpeg" type="audio/mpeg">
+                        Your browser does not support audio playback.
+                    </audio>
+                </div>
+                <div class="song-rainbow" aria-hidden="true">🌈 1️⃣ 2️⃣ 3️⃣ ⭐ 🎈</div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer-features">
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">🍃</span>
+                    <h3>Thoughtfully Designed</h3>
+                    <p>Made with little learners in mind.</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">🎓</span>
+                    <h3>Boosts Learning</h3>
+                    <p>Discover joyful ways to learn and play</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">💖</span>
+                    <h3>Made with Care</h3>
+                    <p>Every little detail matters to us</p>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img class="logo" src="image/logo.jpeg" alt="Littlewoodies Logo">
+                        <span>LITTLEWOODIES</span>
+                    </a>
+                    <p class="slogan">LEARN • PLAY • GROW</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h3>Explore</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Learn.html">Listen & Learn</a></li>
+                            <li><a href="Products.html">Other Products</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>About & Support</h3>
+                        <ul>
+                            <li><a href="About.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="Feedback.html">Feedback & Suggestions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 LITTLEWOODIES. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <audio id="numberAudio" preload="none"></audio>
+
+        <script>
+            const numbers = [
+                { n: 1, word: "One", emoji: "☝️" },
+                { n: 2, word: "Two", emoji: "🦢" },
+                { n: 3, word: "Three", emoji: "🦋" },
+                { n: 4, word: "Four", emoji: "🍀" },
+                { n: 5, word: "Five", emoji: "⭐" },
+                { n: 6, word: "Six", emoji: "🐝" },
+                { n: 7, word: "Seven", emoji: "🌈" },
+                { n: 8, word: "Eight", emoji: "🐙" },
+                { n: 9, word: "Nine", emoji: "🎈" },
+                { n: 10, word: "Ten", emoji: "🔟" },
+                { n: 11, word: "Eleven", emoji: "🍭" },
+                { n: 12, word: "Twelve", emoji: "🧸" },
+                { n: 13, word: "Thirteen", emoji: "🐞" },
+                { n: 14, word: "Fourteen", emoji: "🌼" },
+                { n: 15, word: "Fifteen", emoji: "🍓" },
+                { n: 16, word: "Sixteen", emoji: "🐠" },
+                { n: 17, word: "Seventeen", emoji: "🪁" },
+                { n: 18, word: "Eighteen", emoji: "🌻" },
+                { n: 19, word: "Nineteen", emoji: "🐢" },
+                { n: 20, word: "Twenty", emoji: "🎉" }
+            ];
+
+            const grid = document.getElementById("numbersGrid");
+            const numberAudio = document.getElementById("numberAudio");
+            const audioStatus = document.getElementById("audioStatus");
+
+            numbers.forEach(({ n, word, emoji }, index) => {
+                const card = document.createElement("article");
+                card.className = "number-card";
+                card.style.setProperty("--card-index", index);
+                const button = document.createElement("button");
+                button.className = "wooden-number";
+                button.type = "button";
+                button.textContent = n;
+                button.setAttribute("aria-label", `Number ${n}`);
+                button.setAttribute("aria-pressed", "false");
+                const caption = document.createElement("p");
+                caption.className = "number-sentence";
+                caption.textContent = `${n} — ${word}`;
+            
+                button.addEventListener("click", async () => {
+                    // Reset all other number cards
+                    document.querySelectorAll(".wooden-number").forEach((item) => {
+                        if (item !== button) {
+                        clearTimeout(item.resetTimer);
+                        item.textContent = item.dataset.number;
+                        item.style.fontSize = "";
+                        item.classList.remove("revealed");
+                        item.setAttribute("aria-label", `Number ${item.dataset.number}`);
+                        item.setAttribute("aria-pressed", "false");
+                        }
+                    });
+
+                    // Clear the previous reset timer for this card
+                    clearTimeout(button.resetTimer);
+                    // Show exactly n matching emojis inside the same card
+                    button.textContent = Array(n).fill(emoji).join(" ");
+
+                    // Fit larger counts inside the existing wooden card
+                    button.style.fontSize =
+                    n >= 15 ? "17px" :
+                    n >= 10 ? "21px" :
+                    n >= 6  ? "27px" : 
+                    n >= 2  ? "29px" : "";
+                    button.classList.add("revealed");
+                    button.setAttribute("aria-label", `${n} ${word} emojis`);
+                    button.setAttribute("aria-pressed", "true");
+
+                    // Restore the original number after 4 seconds
+                    button.resetTimer = setTimeout(() => {
+                        button.textContent = n;
+                        button.style.fontSize = "";
+                        button.classList.remove("revealed");
+                        button.setAttribute("aria-label", `Number ${n}`);
+                        button.setAttribute("aria-pressed", "false");
+                    }, 4000);
+
+                    // Keep the existing number audio functionality
+                    numberAudio.pause();
+                    numberAudio.currentTime = 0;
+                    numberAudio.src = `./audio/numbers/${n}.mpeg`;
+                    audioStatus.textContent = `🔊 ${n} — ${word}!`;
+
+                    try {
+                        await numberAudio.play();
+                    } catch (error) {
+                        audioStatus.textContent =
+                        `Couldn't play ${word}'s sound. Check audio/alphabet/numbers/${n}.mpeg`;
+                        console.error("Number audio error:", error);
+                    }
+                });
+                button.dataset.number = n;
+                card.append(button, caption);
+                grid.appendChild(card);
+            });
+
+            numberAudio.addEventListener("ended", () => {
+                audioStatus.textContent = "🌟 Well done! Choose another number.";
+            });
+
+            // Custom counting-song player
+            const song = document.getElementById("songPlayer");
+            const playButton = document.getElementById("playSong");
+            const progress = document.getElementById("songProgress");
+            const currentTimeLabel = document.getElementById("currentTime");
+            const durationLabel = document.getElementById("duration");
+            const songMessage = document.getElementById("songMessage");
+            const playerStatus = document.getElementById("playerStatus");
+            const musicIcon = document.getElementById("musicIcon");
+            function formatTime(seconds) {
+                if (!Number.isFinite(seconds)) return "0:00";
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins}:${String(secs).padStart(2, "0")}`;
+            }   
+
+            function updatePlayButton(playing) {
+                playButton.textContent = playing ? "Ⅱ" : "▶";
+                playButton.setAttribute(
+                    "aria-label", playing ? "Pause counting song" : "Play counting song"
+                );
+                document.querySelector(".music-player").classList.toggle("is-playing", playing);
+                musicIcon.classList.toggle("is-playing", playing);
+                songMessage.textContent = playing
+                    ? "You're doing great! Keep counting!"
+                    : "Ready to sing and count?";
+                playerStatus.textContent = playing ? "NOW PLAYING ♪" : "PRESS PLAY TO START";
+            }
+
+            playButton.addEventListener("click", async () => {
+                if (song.paused) {
+                    try {
+                        await song.play();
+                        updatePlayButton(true);
+                        audioStatus.textContent = "🎵 Counting song is playing!";
+                    } catch (error) {
+                        songMessage.textContent = "Song couldn't load — check the audio file.";
+                        playerStatus.textContent = "AUDIO FILE NOT FOUND";
+                        audioStatus.textContent =
+                            "Check audio/alphabet/numbers/1-20 numbers song.mpeg";
+                        console.error("Song playback error:", error);
+                    }
+                }   else {
+                        song.pause();
+                        updatePlayButton(false);
+                    }
+            });
+
+            song.addEventListener("loadedmetadata", () => {
+                durationLabel.textContent = formatTime(song.duration);
+            });
+
+            song.addEventListener("timeupdate", () => {
+                currentTimeLabel.textContent = formatTime(song.currentTime);
+                if (Number.isFinite(song.duration) && song.duration > 0) {
+                    progress.value = (song.currentTime / song.duration) * 100;
+                }
+            });
+
+            progress.addEventListener("input", () => {
+                if (Number.isFinite(song.duration) && song.duration > 0) {
+                    song.currentTime = (Number(progress.value) / 100) * song.duration;
+                }
+            });
+
+            song.addEventListener("play", () => updatePlayButton(true));
+            song.addEventListener("pause", () => updatePlayButton(false));
+            song.addEventListener("ended", () => {
+                updatePlayButton(false);
+                progress.value = 0;
+                song.currentTime = 0;
+                songMessage.textContent = "Amazing! Let's sing it again!";
+                audioStatus.textContent = "🌟 Great counting! Play the song again.";
+            });
+
+            song.addEventListener("error", () => {
+                playerStatus.textContent = "CHECK SONG FILE";
+                songMessage.textContent = "Please check the counting song file path.";
+
+
+            });
+        </script>
+    </body>
+</html>

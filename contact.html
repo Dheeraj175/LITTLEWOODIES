@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover LITTLEWOODIES, where kids learn, play, and grow with wooden learning products designed to inspire creativity, curiosity, and fun.">
+        <!-- Google Fonts: Same as Learn Page -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- LOGO AND TITTLE -->
+        <link rel="icon" type="image/jpeg" href="logo.jpeg">
+        <title>Contact Us | LITTLEWOODIES</title>
+        <link rel="stylesheet" href="contact.css">
+
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <h1 class="brand-name">
+                    <img class="logo" src="image/logo.jpeg" alt="LITTLEWOODIES Logo">
+                    LITTLEWOODIES
+                </h1>
+            </div>
+            <div>
+                <nav class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html" class="active">Contact Us</a>
+                    <a href="Feedback.html">Feedback</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="contact-page">
+            <section class="contact-hero">
+                <span class="eyebrow">WE'RE HERE TO HELP</span>
+                <h1>Let's Talk<span>.</span></h1>
+                <p>Have a question about our educational products? We'd love to hear from you.</p>
+            </section>
+            <section class="contact-layout">
+                <!-- CONTACT INFORMATION -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p class="info-intro">Whether you're interested in our products or have a business enquiry, feel free to contact us.</p>
+                    <a class="contact-card" href="https://wa.me/919971174589" target="_blank" rel="noopener noreferrer">
+                        <span class="contact-icon">📱</span>
+                        <span class="contact-text">
+                            <strong>WhatsApp Us</strong>
+                            <small>Ask about products and bulk orders</small>
+                        </span>
+                        <span class="arrow">↗</span>
+                    </a>
+                    <a class="contact-card" href="mailto:littlewoodies4@gmail.com">
+                        <span class="contact-icon">✉️</span>
+                        <span class="contact-text">
+                            <strong>Email Us</strong>
+                            <small>Send us your questions</small>
+                        </span>
+                        <span class="arrow">↗</span>
+                    </a>
+                    <a class="contact-card" href="Feedback.html">
+                        <span class="contact-icon">💬</span>
+                        <span class="contact-text">
+                            <strong>Feedback & Suggestion</strong>
+                            <small>You can feedback us, also you can give us suggestion</small>
+                        </span>
+                        <span class="arrow">↗</span>
+                    </a>
+                    <div class="contact-card">
+                        <span class="contact-icon">🌟</span>
+                        <span class="contact-text">
+                            <strong>Business &amp; Bulk Orders</strong>
+                            <small>Contact us for product enquiries</small>
+                        </span>
+                    </div>
+                    <div class="contact-note">
+                        <span>🌿</span>
+                        <p><strong>We're happy to help!</strong><br>Let's make learning fun together.</p>
+                    </div>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <div class="contact-form-box">
+                    <h2>Send Us a Message</h2>
+                    <p class="form-intro">Fill in the details and we'll get back to you.</p>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+
+                        <!-- Web3Forms access key -->
+                        <input type="hidden" name="access_key" value="90ff576f-5acd-48d9-8030-fd35d4eb4364">
+                    
+                        <!-- Email subject -->
+                        <input type="hidden" name="subject" value="New LITTLEWOODIES Contact Enquiry">
+                        <input type="hidden" name="from_name" value="LITTLEWOODIES Website">
+
+                        <!-- Spam protection -->
+                        <input type="checkbox" name="botcheck" style="display:none;">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="100" required>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" maxlength="254" required>
+                        <label for="subjectSelect">What is your enquiry about?</label>
+                        <select id="subjectSelect" name="enquiry_type" required>
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="Product Enquiry">Product Enquiry</option>
+                            <option value="Bulk Order">Bulk Order</option>
+                            <option value="Website / Listen & Learn">Website / Listen &amp; Learn</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4" maxlength="3000" placeholder="How can we help you?" required></textarea>
+                        
+                        <!-- hCaptcha widget -->
+                        <div class="h-captcha" data-captcha="true"></div>
+                            <button type="submit" id="submitButton">Send Message ↗</button>
+                            <p id="formStatus" class="form-disclaimer" role="status" aria-live="polite">Your message will be sent to our email.</p>
+                    </form>     
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-features">
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">🍃</span>
+                    <h3>Thoughtfully Designed</h3>
+                    <p>Made with little learners in mind.</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">🎓</span>
+                    <h3>Boosts Learning</h3>
+                    <p>Discover joyful ways to learn and play</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon" aria-hidden="true">💖</span>
+                    <h3>Made with Care</h3>
+                    <p>Every little detail matters to us</p>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img class="logo" src="image/logo.jpeg" alt="Littlewoodies Logo">
+                        <span>LITTLEWOODIES</span>
+                    </a>
+                    <p class="slogan">LEARN • PLAY • GROW</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h3>Explore</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Learn.html">Listen & Learn</a></li>
+                            <li><a href="Products.html">Other Products</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>About & Support</h3>
+                        <ul>
+                            <li><a href="About.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="Feedback.html">Feedback & Suggestions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 LITTLEWOODIES. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Web3Forms CAPTCHA support -->
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+        <!-- AJAX FORM SUBMISSION -->
+        <script>
+            const contactForm = document.getElementById("contactForm");
+            const formStatus = document.getElementById("formStatus");
+            const submitButton = document.getElementById("submitButton");
+
+            contactForm.addEventListener("submit", async function (event) {
+                   event.preventDefault();
+
+                // Prevent submission without CAPTCHA
+                const captchaResponse = contactForm.querySelector(
+                    'textarea[name="h-captcha-response"]'
+                );
+
+                if (!captchaResponse || !captchaResponse.value.trim()) {
+                    formStatus.textContent =
+                        "Please complete the CAPTCHA verification first.";
+                    formStatus.style.color = "#b42318";
+                    return;
+                }
+
+                const originalButtonText = "Send Message ↗";
+
+                submitButton.disabled = true;
+                submitButton.textContent = "Sending...";
+                formStatus.textContent = "Sending your message...";
+                formStatus.style.color = "#66766f";
+
+                try {
+                    const response = await fetch(
+                        "https://api.web3forms.com/submit",
+                        {
+                            method: "POST",
+                            body: new FormData(contactForm),
+                            headers: {
+                                "Accept": "application/json"
+                            }
+                        }
+                    );
+
+                    const result = await response.json();
+
+                    if (response.ok && result.success) {
+                        contactForm.reset();
+
+                        formStatus.textContent =
+                            "Thank you! Your message has been sent successfully.";
+
+                        formStatus.style.color = "#075b49";
+                    }   
+                    else {
+                        formStatus.textContent =
+                            result.message ||
+                            "Unable to send your message. Please try again.";
+                        formStatus.style.color = "#b42318";
+                    }
+
+                }
+                catch (error) {
+                    formStatus.textContent =
+                        "Connection error. Please check your internet and try again.";
+                    formStatus.style.color = "#b42318";
+                }
+                finally {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }
+            });
+        </script>
+
+    </body>
+</html>
