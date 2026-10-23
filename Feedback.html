@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGXZ30M7RF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZGXZ30M7RF');
+        </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Discover LITTLEWOODIES, where kids learn, play, and grow with wooden learning products designed to inspire creativity, curiosity, and fun.">
-        <!-- Google Fonts: Same as Learn Page -->
+        <meta name="description" content="Share your experience and suggestions with Littlewoodies. Help us improve our wooden toys, educational tools, and learning activities for kids.">
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-        <!-- LOGO AND TITTLE -->
-        <link rel="icon" type="image/jpeg" href="logo.jpeg">
-        <title>Feedback & Suggestions | LITTLEWOODIES</title>
+        <!-- LOGO AND TITLE -->
+        <link rel="icon" type="image/jpeg" href="image/logo.jpeg">
+        <title>Feedback & Suggestions | Littlewoodies</title>
         <link rel="stylesheet" href="Feedback.css">
+        <!-- canonical tag -->
+         <link rel="canonical" href="https://littlewoodies.netlify.app/feedback">
     </head>
-
     <body>
         <header>
-            <div>
-                <h1 class="brand-name">
-                    <img class="logo" src="image/logo.jpeg" alt="LITTLEWOODIES Logo">
-                    LITTLEWOODIES
-                </h1>
+            <div class="brand">
+                    <img class="logo" src="image/logo.jpeg" alt="Littlewoodies Logo">
+                    <span class="brand-name">LITTLEWOODIES</span>
             </div>
-            <div>
-                <nav class="navbar">
+            <div class="navbar">
+                <nav aria-label="Main navigation">
                     <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
+                    <a href="About.html">About Us</a>
                     <a href="contact.html">Contact Us</a>
-                    <a href="Feedback.html" class="active">Feedback</a>
+                    <a href="Feedback.html" class="active" aria-current="page">Feedback</a>
                 </nav>
             </div>
         </header>
-        
         <main class="feedback-container">
             <section class="feedback-intro">
                 <span class="intro-icon">🥰</span>
-                <h2>We Value Your Feedback!</h2>
+                <h1>We Value Your Feedback!</h1>
                 <p>At LITTLEWOODIES, your feedback helps us grow. Share your experience, ideas, and suggestions to help us make learning more fun for every child.</p>
             </section>
-
+            
             <!-- FEEDBACK FORM -->
             <section class="feedback-card">
                 <h2>Share Your Thoughts</h2>
@@ -50,13 +55,11 @@
                         <label for="name">Your Name *</label>
                         <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required>
                     </div>
-
                     <!-- EMAIL -->
                     <div class="form-group">
                         <label for="email">Email Address *</label>
                         <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required>
                     </div>
-                
                     <!-- FEEDBACK CATEGORY -->
                     <div class="form-group">
                         <label for="category">Feedback About *</label>
@@ -70,7 +73,6 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    
                     <!-- STAR RATING -->
                     <div class="form-group">
                         <label>How was your experience? *</label>
@@ -88,34 +90,30 @@
                         </div>
                         <p class="rating-hint">Select a rating from 1 to 5 stars.</p>
                     </div>
-
                     <!-- FEEDBACK MESSAGE -->
                     <div class="form-group">
                         <label for="message">Your Feedback & Suggestions *</label>
                         <textarea id="message" name="message" rows="6" placeholder="Tell us what you liked or what we can improve..." required></textarea>
                     </div>
-
                     <!-- RECOMMENDATION -->
                     <div class="recommendation">
                         <input type="checkbox" id="recommend" name="recommend" value="Yes">
                         <label for="recommend">I would recommend LITTLEWOODIES to others.</label>
                     </div>
-
                     <!-- SUBMIT -->
                     <button type="submit" class="submit-btn">Submit Feedback →</button>
-
                     <p class="privacy-note">🌟 Thank you for helping LITTLEWOODIES grow!</p>
                     <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
                 </form>
             </section>
-
+            
             <!-- THANK YOU SECTION -->
             <section class="thank-you">
                 <h2>🌱 Every Suggestion Helps Us Grow</h2>
                 <p>Your ideas inspire us to create better products and a happier learning experience for children.</p>
             </section>
         </main>
-
+        
         <footer>
             <div class="footer-features">
                 <div class="feature">
@@ -171,46 +169,45 @@
             const formMessage = document.getElementById("formMessage");
             const submitButton = feedbackForm.querySelector(".submit-btn");
             const scriptURL = "https://script.google.com/macros/s/AKfycbyG1cnN9stsLrsm5g4NWhNHU80QIREHa5HDkrCD6lj-Mi4LILB1Z_4FLYF125mwGFwEyA/exec";
+            
             feedbackForm.addEventListener("submit", async function(event) {
                 event.preventDefault();
                 if (!feedbackForm.reportValidity()) {
                     return;
                 }
-                if (!scriptURL.startsWith("https://script.google.com/macros/s/") ||
-                    !scriptURL.endsWith("/exec")) {
-                        formMessage.textContent =
-                            "Please configure the Google Apps Script URL first.";
-                        formMessage.classList.add("visible");
+                if (!scriptURL.startsWith("https://script.google.com/macros/s/") || !scriptURL.endsWith("/exec")) {
+                    formMessage.textContent = "Please configure the Google Apps Script URL first.";
+                    formMessage.classList.add("visible");
                     return;
                 }
-                    submitButton.disabled = true;
-                    submitButton.textContent = "Submitting...";
-                    formMessage.classList.add("visible");
-                    formMessage.textContent = "Submitting your feedback...";
+                
+                submitButton.disabled = true;
+                submitButton.textContent = "Submitting...";
+                formMessage.classList.add("visible");
+                formMessage.textContent = "Submitting your feedback...";
+                
                 try {
                     const formData = new FormData(feedbackForm);
                     const data = new URLSearchParams();
                     for (const [key, value] of formData.entries()) {
-                    data.append(key, value);
+                        data.append(key, value);
                     }
                     await fetch(scriptURL, {
                         method: "POST",
                         mode: "no-cors",
                         body: data
                     });
-                    formMessage.textContent =
-                        "Your feedback request has been sent. 😍";
+                    formMessage.textContent = "Your feedback request has been sent. 😍";
                     feedbackForm.reset();
                 } 
                 catch (error) {
-                    formMessage.textContent =
-                    "We could not send your feedback. Please check your internet connection and try again.";
+                    formMessage.textContent = "We could not send your feedback. Please check your internet connection and try again.";
                 }
                 finally {
                     submitButton.disabled = false;
                     submitButton.textContent = "Submit Feedback →";
                 }
-             });
+            });
         </script>
     </body>
 </html>

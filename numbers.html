@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGXZ30M7RF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZGXZ30M7RF');
+        </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Discover LITTLEWOODIES, where kids learn, play, and grow with wooden learning products designed to inspire creativity, curiosity, and fun.">
-        <!-- Google Fonts: Same as Learn Page -->
+        <meta name="description" content="Learn numbers 1 to 20 with interactive wooden tiles, counting fun, and educational songs for kids at Littlewoodies.">
+        <!-- Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <!-- LOGO AND TITTLE -->
-        <link rel="icon" type="image/jpeg" href="logo.jpeg">
-        <title>Numbers Learning | LITTLEWOODIES</title>
+        <link rel="icon" type="image/jpeg" href="image/logo.jpeg">
+        <title>Numbers Learning & Counting Songs | Littlewoodies</title>
         <link rel="stylesheet" href="numbers.css">
-
+        <!-- canonical tag -->
+        <link rel="canonical" href="https://littlewoodies.netlify.app/numbers">
     </head>
-
     <body>
-
         <header class="page-header">
             <a href="Learn.html" class="nav-link">← Previous Page</a>
             <div class="brand" aria-label="LITTLEWOODIES Home">
@@ -26,9 +32,7 @@
             </div>
             <a href="index.html" class="nav-link home-link">🏠 Home</a>
         </header>
-        
         <main class="learning-page">
-            
             <section class="intro">
                 <span class="intro-tag">🌱 LITTLEWOODIES LEARNING CORNER</span>
                 <h1>Let's Learn Numbers!</h1>
@@ -40,7 +44,6 @@
                     <span>⭐</span>
                 </div>
             </section>
-
             <section class="numbers-section">
                 <div class="section-heading">
                     <h2>🔢 Meet Your Number Friends!</h2>
@@ -48,10 +51,8 @@
                 </div>
                 <div class="numbers-grid" id="numbersGrid" aria-label="Number learning buttons"></div>
             </section>
-
             <p class="instructions">👆 Tap a number to reveal its picture and hear the sound!</p>
             <p id="audioStatus" class="audio-status" role="status" aria-live="polite"></p>
-
             <!-- CREATIVE NUMBERS MUSIC PLAYER -->
             <section class="song-section">
                 <div class="song-top">
@@ -93,9 +94,7 @@
                 </div>
                 <div class="song-rainbow" aria-hidden="true">🌈 1️⃣ 2️⃣ 3️⃣ ⭐ 🎈</div>
             </section>
-
         </main>
-
         <footer>
             <div class="footer-features">
                 <div class="feature">
@@ -145,9 +144,7 @@
                 <p>&copy; 2026 LITTLEWOODIES. All rights reserved.</p>
             </div>
         </footer>
-
         <audio id="numberAudio" preload="none"></audio>
-
         <script>
             const numbers = [
                 { n: 1, word: "One", emoji: "☝️" },
@@ -171,11 +168,9 @@
                 { n: 19, word: "Nineteen", emoji: "🐢" },
                 { n: 20, word: "Twenty", emoji: "🎉" }
             ];
-
             const grid = document.getElementById("numbersGrid");
             const numberAudio = document.getElementById("numberAudio");
             const audioStatus = document.getElementById("audioStatus");
-
             numbers.forEach(({ n, word, emoji }, index) => {
                 const card = document.createElement("article");
                 card.className = "number-card";
@@ -189,7 +184,6 @@
                 const caption = document.createElement("p");
                 caption.className = "number-sentence";
                 caption.textContent = `${n} — ${word}`;
-            
                 button.addEventListener("click", async () => {
                     // Reset all other number cards
                     document.querySelectorAll(".wooden-number").forEach((item) => {
@@ -202,12 +196,10 @@
                         item.setAttribute("aria-pressed", "false");
                         }
                     });
-
                     // Clear the previous reset timer for this card
                     clearTimeout(button.resetTimer);
                     // Show exactly n matching emojis inside the same card
                     button.textContent = Array(n).fill(emoji).join(" ");
-
                     // Fit larger counts inside the existing wooden card
                     button.style.fontSize =
                     n >= 15 ? "17px" :
@@ -217,7 +209,6 @@
                     button.classList.add("revealed");
                     button.setAttribute("aria-label", `${n} ${word} emojis`);
                     button.setAttribute("aria-pressed", "true");
-
                     // Restore the original number after 4 seconds
                     button.resetTimer = setTimeout(() => {
                         button.textContent = n;
@@ -226,13 +217,11 @@
                         button.setAttribute("aria-label", `Number ${n}`);
                         button.setAttribute("aria-pressed", "false");
                     }, 4000);
-
                     // Keep the existing number audio functionality
                     numberAudio.pause();
                     numberAudio.currentTime = 0;
                     numberAudio.src = `./audio/numbers/${n}.mpeg`;
                     audioStatus.textContent = `🔊 ${n} — ${word}!`;
-
                     try {
                         await numberAudio.play();
                     } catch (error) {
@@ -245,11 +234,9 @@
                 card.append(button, caption);
                 grid.appendChild(card);
             });
-
             numberAudio.addEventListener("ended", () => {
                 audioStatus.textContent = "🌟 Well done! Choose another number.";
             });
-
             // Custom counting-song player
             const song = document.getElementById("songPlayer");
             const playButton = document.getElementById("playSong");
@@ -265,7 +252,6 @@
                 const secs = Math.floor(seconds % 60);
                 return `${mins}:${String(secs).padStart(2, "0")}`;
             }   
-
             function updatePlayButton(playing) {
                 playButton.textContent = playing ? "Ⅱ" : "▶";
                 playButton.setAttribute(
@@ -278,7 +264,6 @@
                     : "Ready to sing and count?";
                 playerStatus.textContent = playing ? "NOW PLAYING ♪" : "PRESS PLAY TO START";
             }
-
             playButton.addEventListener("click", async () => {
                 if (song.paused) {
                     try {
@@ -297,24 +282,20 @@
                         updatePlayButton(false);
                     }
             });
-
             song.addEventListener("loadedmetadata", () => {
                 durationLabel.textContent = formatTime(song.duration);
             });
-
             song.addEventListener("timeupdate", () => {
                 currentTimeLabel.textContent = formatTime(song.currentTime);
                 if (Number.isFinite(song.duration) && song.duration > 0) {
                     progress.value = (song.currentTime / song.duration) * 100;
                 }
             });
-
             progress.addEventListener("input", () => {
                 if (Number.isFinite(song.duration) && song.duration > 0) {
                     song.currentTime = (Number(progress.value) / 100) * song.duration;
                 }
             });
-
             song.addEventListener("play", () => updatePlayButton(true));
             song.addEventListener("pause", () => updatePlayButton(false));
             song.addEventListener("ended", () => {
@@ -324,12 +305,9 @@
                 songMessage.textContent = "Amazing! Let's sing it again!";
                 audioStatus.textContent = "🌟 Great counting! Play the song again.";
             });
-
             song.addEventListener("error", () => {
                 playerStatus.textContent = "CHECK SONG FILE";
                 songMessage.textContent = "Please check the counting song file path.";
-
-
             });
         </script>
     </body>

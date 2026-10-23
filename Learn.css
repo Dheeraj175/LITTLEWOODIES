@@ -58,13 +58,13 @@ header {
 
 .brand {
     text-align: center;
-}
-
-header .brand h1 {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+
+.brand-name {
     color: var(--green);
     font-family: 'Baloo 2', cursive;
     font-size: 30px;
@@ -79,7 +79,6 @@ header .brand h1 {
     border-radius: 50%;
     flex-shrink: 0;
 }
-
 
 /* DESKTOP NAVIGATION */
 
@@ -104,9 +103,7 @@ nav a {
     font-size: 14px;
     font-weight: 800;
     color: var(--text);
-    transition: background 0.25s ease,
-                color 0.25s ease,
-                transform 0.25s ease;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 nav a:hover {
@@ -121,11 +118,10 @@ nav a.active {
 
 nav a:focus-visible,
 footer a:focus-visible,
-.learning-card a:focus-visible {
+.home-card a:focus-visible {
     outline: 3px solid #90bc84;
     outline-offset: 4px;
 }
-
 /* MOBILE HOME BUTTON: HIDDEN ON DESKTOP */
 
 .mobile-home-container {

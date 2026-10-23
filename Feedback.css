@@ -86,79 +86,71 @@ header > div:last-child {
     width: 100%;
 }
 
-header h1.brand-name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 0;
-    color: var(--green);
-    font-family: 'Baloo 2', cursive;
-    font-size: clamp(22px, 3vw, 30px);
-    font-weight: 800;
-    line-height: 1.2;
+.brand {
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-header h1 .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.brand-name {
+    color: var(--green);
+    font-family: 'Baloo 2', cursive;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.logo {
+    width: 54px;
+    height: 54px;
     object-fit: contain;
+    border-radius: 50%;
     flex-shrink: 0;
 }
 
-/* Navigation: exactly four links */
+/* DESKTOP NAVIGATION */
 
-header nav.navbar {
+.navbar {
+    width: 100%;
+}
+
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
-    width: 100%;
 }
 
-header nav.navbar a {
+nav a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 9px 17px;
-    border-radius: 10px;
-    background: transparent;
+    padding: 9px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 800;
     color: var(--text);
-    font-family: 'Baloo 2', cursive;
-    font-size: 15px;
-    font-weight: 700;
-    white-space: nowrap;
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
-header nav.navbar a:hover {
+nav a:hover {
     background: var(--light-green);
     color: var(--green);
 }
 
-/* Feedback is the active page */
-
-header nav.navbar a.active {
+nav a.active {
     background: var(--green);
     color: var(--white);
 }
 
-header nav.navbar a.active:hover {
-    background: var(--dark-green);
-    color: var(--white);
-}
-
-header nav.navbar a:focus-visible,
-.footer-links a:focus-visible,
-.footer-logo:focus-visible,
-button:focus-visible {
-    outline: 3px solid var(--yellow);
-    outline-offset: 3px;
+nav a:focus-visible,
+footer a:focus-visible,
+.home-card a:focus-visible {
+    outline: 3px solid #90bc84;
+    outline-offset: 4px;
 }
 
 

@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
+        <!-- Google tag (gtag.js) google tracker-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGXZ30M7RF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZGXZ30M7RF');
+        </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Discover LITTLEWOODIES, where kids learn, play, and grow with wooden learning products designed to inspire creativity, curiosity, and fun.">
-        <!-- Google Fonts: Same as Learn Page -->
+        <meta name="description" content="Explore interactive audio-visual learning activities at Littlewoodies! Fun educational tools for kids to learn alphabets, numbers 1-20, Hindi Varnamala and etc.">
+        <!-- google font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <!-- LOGO AND TITTLE -->
-        <link rel="icon" type="image/jpeg" href="logo.jpeg">
-        <title>Listen & Learn | LITTLEWOODIES</title>
+        <link rel="icon" type="image/jpeg" href="image/logo.jpeg">
+        <title>Listen & Learn Activities | Littlewoodies</title>
         <link rel="stylesheet" href="Learn.css">
-
+        <!-- canonical tag -->
+        <link rel="canonical" href="https://littlewoodies.netlify.app/learn">
     </head>
-
     <body>
-
         <header>
             <div class="brand">
-                <h1>
-                    <img class="logo" src="image/logo.jpeg" alt="Littlewoodies Logo">
-                    <span>LITTLEWOODIES</span>
-                </h1>
+                <img class="logo" src="image/logo.jpeg" alt="Littlewoodies Logo">
+                <span class="brand-name">LITTLEWOODIES</span>
             </div>
-
-            <!-- Desktop Navigation -->
             <div class="navbar">
                 <nav aria-label="Main navigation">
                     <a href="index.html">Home</a>
@@ -37,7 +39,6 @@
                     <a href="Feedback.html">Feedback</a>
                 </nav>
             </div>
-
             <!-- Mobile Home Button -->
             <div class="mobile-home-container">
                 <a href="index.html" class="mobile-home">
@@ -46,51 +47,45 @@
                 </a>
             </div>
         </header>
-
         <main>
             <section class="page-intro">
                 <span class="intro-label">A LITTLE FUN, A LOT OF LEARNING</span>
-                <h2>Listen, Learn & Explore!</h2>
+                <h1>Listen, Learn & Explore!</h1>
                 <p>Discover something new every day through the joy of learning.</p>
             </section>
-
             <section class="learning-grid" aria-label="Learning categories">
                 <div class="learning-card">
                     <a href="alphabet.html" aria-label="Learn the alphabet">
                         <div class="image-box">
                             <img src="image/Abc logo.jpeg" alt="Alphabet learning">
                         </div>
-                        <h3 class="text">Alphabet</h3>
+                        <h2 class="text">Alphabet</h2>
                         <p>Discover letters and their sounds.</p>
                         <span class="card-action">Let's Learn <span aria-hidden="true">→</span></span>
                     </a>
                 </div>
-
                 <div class="learning-card">
                     <a href="numbers.html" aria-label="Learn numbers from 1 to 20">
                         <div class="image-box">
                             <img src="image/1-20logo.jpeg" alt="Numbers from 1 to 20">
                         </div>
-                        <h3 class="text">1-20 Numbers</h3>
+                        <h2 class="text">1-20 Numbers</h2>
                         <p>Count, recognise and explore numbers.</p>
                         <span class="card-action">Let's Learn <span aria-hidden="true">→</span></span>
                     </a>
                 </div>
-
                 <div class="learning-card">
                     <a href="hindi.html" aria-label="Learn Hindi Swar">
                         <div class="image-box">
                             <img src="image/varnamala.jpeg" alt="Hindi Swar learning">
                         </div>
-                        <h3 class="text">Varnamala</h3>
+                        <h2 class="text">Varnamala</h2>
                         <p>Learn Hindi varnamala in a fun way.</p>
                         <span class="card-action">Let's Learn <span aria-hidden="true">→</span></span>
                     </a>
                 </div>
-
             </section>
         </main>
-
         <footer>
             <div class="footer-features">
                 <div class="feature">
@@ -140,6 +135,5 @@
                 <p>&copy; 2026 LITTLEWOODIES. All rights reserved.</p>
             </div>
         </footer>
-
     </body>
 </html>

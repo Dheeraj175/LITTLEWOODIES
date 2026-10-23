@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGXZ30M7RF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZGXZ30M7RF');
+        </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Discover LITTLEWOODIES, where kids learn, play, and grow with wooden learning products designed to inspire creativity, curiosity, and fun.">
-        <!-- Google Fonts: Same as Learn Page -->
+        <meta name="description" content="Get in touch with Littlewoodies for product inquiries, bulk orders, and support. Contact us via WhatsApp, email, or our quick message form.">
+        <!-- Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <!-- LOGO AND TITTLE -->
-        <link rel="icon" type="image/jpeg" href="logo.jpeg">
-        <title>Contact Us | LITTLEWOODIES</title>
+        <link rel="icon" type="image/jpeg" href="image/logo.jpeg">
+        <title>Contact Us | Littlewoodies - Get in Touch</title>
         <link rel="stylesheet" href="contact.css">
-
+        <!-- canonical tag -->
+        <link rel="canonical" href="https://littlewoodies.netlify.app/contact">
     </head>
-
     <body>
         <header>
-            <div>
-                <h1 class="brand-name">
-                    <img class="logo" src="image/logo.jpeg" alt="LITTLEWOODIES Logo">
-                    LITTLEWOODIES
-                </h1>
+            <div class="brand">
+                <img class="logo" src="image/logo.jpeg" alt="Littlewoodies Logo">
+                <span class="brand-name">LITTLEWOODIES</span>
             </div>
-            <div>
-                <nav class="navbar">
+            <div class="navbar">
+                <nav aria-label="Main navigation">
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="contact.html" class="active">Contact Us</a>
@@ -33,7 +38,6 @@
                 </nav>
             </div>
         </header>
-
         <main class="contact-page">
             <section class="contact-hero">
                 <span class="eyebrow">WE'RE HERE TO HELP</span>
@@ -81,20 +85,16 @@
                         <p><strong>We're happy to help!</strong><br>Let's make learning fun together.</p>
                     </div>
                 </div>
-
                 <!-- CONTACT FORM -->
                 <div class="contact-form-box">
                     <h2>Send Us a Message</h2>
                     <p class="form-intro">Fill in the details and we'll get back to you.</p>
                     <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-
                         <!-- Web3Forms access key -->
                         <input type="hidden" name="access_key" value="90ff576f-5acd-48d9-8030-fd35d4eb4364">
-                    
                         <!-- Email subject -->
                         <input type="hidden" name="subject" value="New LITTLEWOODIES Contact Enquiry">
                         <input type="hidden" name="from_name" value="LITTLEWOODIES Website">
-
                         <!-- Spam protection -->
                         <input type="checkbox" name="botcheck" style="display:none;">
                         <label for="name">Your Name</label>
@@ -111,7 +111,6 @@
                         </select>
                         <label for="message">Your Message</label>
                         <textarea id="message" name="message" rows="4" maxlength="3000" placeholder="How can we help you?" required></textarea>
-                        
                         <!-- hCaptcha widget -->
                         <div class="h-captcha" data-captcha="true"></div>
                             <button type="submit" id="submitButton">Send Message ↗</button>
@@ -120,7 +119,6 @@
                 </div>
             </section>
         </main>
-
         <footer>
             <div class="footer-features">
                 <div class="feature">
@@ -170,7 +168,6 @@
                 <p>&copy; 2026 LITTLEWOODIES. All rights reserved.</p>
             </div>
         </footer>
-
         <!-- Web3Forms CAPTCHA support -->
         <script src="https://web3forms.com/client/script.js" async defer></script>
         <!-- AJAX FORM SUBMISSION -->
@@ -178,29 +175,23 @@
             const contactForm = document.getElementById("contactForm");
             const formStatus = document.getElementById("formStatus");
             const submitButton = document.getElementById("submitButton");
-
             contactForm.addEventListener("submit", async function (event) {
                    event.preventDefault();
-
                 // Prevent submission without CAPTCHA
                 const captchaResponse = contactForm.querySelector(
                     'textarea[name="h-captcha-response"]'
                 );
-
                 if (!captchaResponse || !captchaResponse.value.trim()) {
                     formStatus.textContent =
                         "Please complete the CAPTCHA verification first.";
                     formStatus.style.color = "#b42318";
                     return;
                 }
-
                 const originalButtonText = "Send Message ↗";
-
                 submitButton.disabled = true;
                 submitButton.textContent = "Sending...";
                 formStatus.textContent = "Sending your message...";
                 formStatus.style.color = "#66766f";
-
                 try {
                     const response = await fetch(
                         "https://api.web3forms.com/submit",
@@ -212,12 +203,9 @@
                             }
                         }
                     );
-
                     const result = await response.json();
-
                     if (response.ok && result.success) {
                         contactForm.reset();
-
                         formStatus.textContent =
                             "Thank you! Your message has been sent successfully.";
 
@@ -229,7 +217,6 @@
                             "Unable to send your message. Please try again.";
                         formStatus.style.color = "#b42318";
                     }
-
                 }
                 catch (error) {
                     formStatus.textContent =
@@ -242,6 +229,5 @@
                 }
             });
         </script>
-
     </body>
 </html>
